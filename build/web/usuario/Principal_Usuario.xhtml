@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/resources/template/template.xhtml"    
+                xmlns="http://www.w3.org/1999/xhtml" 
+                xmlns:h="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:define name="Principal_Usuario"> 
+
+        <!--Inicio jumbotron -->
+        <section class="jumbotron-principal">
+            <div class="container">
+                <h1 class="bienvenido">Hola, Bienvenido</h1>
+            </div>
+        </section>
+
+        <!--Fin jumbotron  -->
+        
+        <!--Inicio de contenido-->
+        <div class="row-titulo">
+            <img  src="#{request.contextPath}/resources/Imgs/Usuario_1.png" height="150" width="150"  alt=""></img>
+            <div class="titulo">
+                Usuario
+            </div>
+        </div>
+
+        <div class="row-modulos">
+            <div class="col-md-6-usu">					
+                <div class="media">
+                    <div class="media-left">	
+                        <a title="Mis datos" href="Ver_Mis_Datos.xhtml"><img  src=" #{request.contextPath}/resources/Imgs/Mis_datos_Usuario.png"   height="100" width="100"  alt="Mis datos"></img></a>	                      		                  		
+                    </div>
+                    <div class="media-body">
+                        <p><h3>Mis datos </h3>Actualiza tus datos o sube archivos personales</p>
+                    </div>						
+                </div>
+            </div>
+
+            <div class="col-md-6-usu">					
+                <div class="media">
+                    <div class="media-left">
+                        <a title="Mis beneficiarios" href="Usu_Beneficiarios.xhtml"  ><img  src="#{request.contextPath}/resources/Imgs/Beneficiarios_Usuario.png"   height="100" width="100"  alt="Beneficiarios"></img></a>	                    		
+                    </div>
+                    <div class="media-body">
+                        <p><h3>Mis beneficiarios </h3>Ingresa nuevos beneficiarios,actualiza datos o sube archivos personales</p>
+                    </div>
+                </div>
+            </div>				
+
+
+            <br></br>
+            <br></br>	
+            <div class="row">
+                <div class="col-md-4">					
+                    <div class="media">
+                        <div class="media-left">
+
+                            <a title="Mis servicios" href="Usu_Servicios.xhtml"  ><img  src="#{request.contextPath}/resources/Imgs/servicios_Usuario.png"   height="100" width="100"  alt="Servicios"></img></a>	                    		
+                        </div>
+                        <div class="media-body">
+                            <p><h3>Servicios </h3>Conoce tus servicios actuales y nuevos servicos disponibles</p>
+                        </div>
+                    </div>
+                    <a href="../index.xhtml"></a>
+
+                </div>
+
+
+                <div class="col-md-5">					
+                    <div class="media">
+                        <div class="media-left">
+
+                            <a title="Mis certificados" href="Usu_Gen_Certificado.xhtml" ><img  src="#{request.contextPath}/resources/Imgs/Gen_certificado_Usuario.png"   height="100" width="100"  alt="Certificado usuario"></img></a>	                    		
+                        </div>
+                        <div class="media-body">
+                            <p><h3>Genera tus certificados </h3>Conoce o descarga tus cerficados actuales</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3-usu">					
+                    <div class="media">
+                        <div class="media-left">
+
+                            <a title="Mis facturas" href="Usu_Gen_Facturas.xhtml" ><img  src="#{request.contextPath}/resources/Imgs/factura_Usuario.png"   height="100" width="100"  alt="Facturas"></img></a>	                    		
+                        </div>
+                        <div class="media-body">
+                            <p><h3>Facturas</h3>Descarga tus facturas</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </ui:define>      
+</ui:composition>

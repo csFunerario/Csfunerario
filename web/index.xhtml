@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, user-scable=no, initial-scale=1.0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>CsFunerario</title>
+        <link rel="stylesheet" href="resources/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="resources/css/bootstrap-select.min.css"/>
+        <link rel="stylesheet" href="resources/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="resources/css/index.css"/>
+        <link rel="stylesheet" href="css/sweetalert.css"/>
+        <link rel="shortcut icon" href="resources/Imgs/Favicon.png"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"/>
+    </h:head>
+    <h:body>
+
+        <div class="container">
+
+        <header class="navbar-fixed-top">
+          <!-- Barra de navegacion Principal -->
+          <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#principal">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a href="#" class="navbar-brand" >
+                    <img src="resources/Imgs/LogoFinalBordeBlanco.png"  class="img-responsive-logo" alt="Logo"/>
+                  </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                  <form action="" class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Buscar"/>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default buscar" type="button">
+                            <span class="">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                      </span>
+                    </div>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#InicioSesion" data-toggle="modal" type="submit" class="btn btn-default-inicio">Ingresar</a></li>
+                  </ul>
+                </div>
+              </div>
+          </nav>
+          <!-- fin barra de navegacion principal -->
+        </header>
+      </div>
+
+
+        <!-- Inicio de Contenido -->
+
+        <!-- comienzo Slider -->
+
+              <div>
+                    <div class="col-md-12">
+                      <div id="carousel-1" class="carousel slide" data-ride="carousel">
+
+                        <!-- indicadores -->
+                          <ol class="carousel-indicators">
+                              <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                              <li data-target="#carousel-1" data-slide-to="1"></li>
+                              <li data-target="#carousel-1" data-slide-to="2"></li>
+                          </ol>
+                          <!-- indicadores -->
+
+                          <!-- contenido Slide -->
+
+                          <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                      <img src="resources/Imgs/Familia1.jpg" class="img-responsive-slider" alt="Img 1"/>
+                                      <div class="carousel-caption">
+                                        <h3>CSFunerario</h3>
+                                      </div>
+                                    </div>
+
+                                    <div class="item">
+                                      <img src="resources/Imgs/Familia2.jpg" class="img-responsive-slider" alt="Img 2"/>
+                                      <div class="carousel-caption">
+                                        <h3>CSFunerario</h3>
+                                      </div>
+                                    </div>
+
+                                    <div class="item">
+                                      <img src="resources/Imgs/Matrimonio.jpg" class="img-responsive-slider" alt="Img 3"/>
+                                      <div class="carousel-caption">
+                                        <h3>CSFunerario</h3>
+                                      </div>
+                                    </div>
+                            </div>
+
+                            <!-- fin contenido slide -->
+
+                            <!-- inconos de movimiento de slide -->
+
+                            <a href="#carousel-1" class="left carousel-control" role="button" data-slide="prev">
+                              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                              <span class="sr-only">Anterior</span>
+                            </a>
+
+                            <a href="#carousel-1" class="right carousel-control" role="button" data-slide="next">
+                              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                              <span class="sr-only">Siguiente</span>
+                            </a>
+
+                            <!-- fin iconos de movimiento de slide -->
+                      </div>
+                  </div>
+              </div>
+
+        <!-- Fin Slider -->
+
+              <section class="container ">
+
+                  <div class="container contenido">
+
+                    <div class="row lin1">
+
+                            <div class="panel panel-default obituarios col-md-8 ">
+
+                                  <div class="panel-heading">
+                                    <h3>Obituarios</h3>
+                                    <div class="panel-group" id="accordion" role="tablist"></div>
+                                  </div>
+                                  <div class="panel-body-obituarios-datos">
+                                        <!-- Configuracion acordeon obituario 1 -->
+                                            <div class="panel panel defeault">
+                                              <div class="panel-heading" role="tab" id="obituario1">
+                                                <h4 class="panel-title">
+                                                  <a href="#despliegue1" data-toggle="collapse" data-parent="#accordion">
+                                                    Maria Belen Ruiz Perez
+                                                  </a>
+                                                  <span class="caret"></span>
+                                                </h4>
+                                              </div>
+                                              <div id="despliegue1" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                  <div class="obituarios-datos col-md-3">
+                                                    <h5>Maria Belen Ruiz Perez</h5>
+                                                    <h5>Descansó en la paz del Señor</h5>
+                                                    <h5>Junio 15 de 2017</h5>
+                                                    <h5>Cucuta</h5>
+                                                  </div>
+                                                  <div class="obituarios-datos col-md-3">
+                                                    <h5>Exequias:</h5>
+                                                    <h5>SAN PEDRO APOSTOL</h5>
+                                                  </div>
+                                                  <div class="obituarios-datos col-md-2">
+                                                    <h5>Hora:</h5>
+                                                    <h5>3:00 pm</h5>
+                                                  </div>
+                                                  <div class="obituarios-datos col-md-2">
+                                                    <h5>Destino final:</h5>
+                                                    <h5>MUNICIPAL VILLA ROSARIO</h5>
+                                                    </div>
+                                                  <div class="obituarios-datos col-md-2">
+                                                    <h5>Hora:</h5>
+                                                    <h5>4:00 pm</h5>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        <!-- fin configuracion obituario 1 -->
+
+                                        <!-- Configuracion acordeon obituario 2 -->
+                                            <div class="panel panel defeault">
+                                              <div class="panel-heading" role="tab" id="obituario">
+                                                <h4 class="panel-title">
+                                                  <a href="#despliegue2" data-toggle="collapse" data-parent="#accordion">
+                                                    Pedro Roberto Jimenez Gomez
+                                                  </a>
+                                                  <span class="caret"></span>
+                                                </h4>
+                                              </div>
+                                              <div id="despliegue2" class="panel-collapse collapse ">
+                                                <div class="panel-body">
+                                                <div class="obituarios-datos col-md-3">
+                                                  <h5>  ROBERTO AREVALO PEREIRA</h5>
+                                                  <h5>  Descansó en la paz del Señor</h5>
+                                                  <h5>  Junio 15 de 2017</h5>
+                                                  <h5>  Bucaramanga</h5>
+                                                </div>
+                                                <div class="obituarios-datos col-md-3">
+                                                  <h5>  Exequias:</h5>
+                                                  <h5>  PARROQUIA DE VADO REAL</h5>
+                                                </div>
+                                                <div class="obituarios-datos col-md-2">
+                                                  <h5>  Hora:</h5>
+                                                  <h5>  10:00 am</h5>
+                                                </div>
+                                                <div class="obituarios-datos col-md-2">
+                                                  <h5>  Destino final:</h5>
+                                                  <h5>  CEMENTERIO LOCAL DE VADO REAL</h5>
+                                                </div>
+                                                <div class="obituarios-datos col-md-2">
+                                                  <h5>  Hora:</h5>
+                                                  <h5>  11:00 am</h5>
+                                                  <h5>  enviar flores</h5>
+                                                </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        <!-- fin configuracion obituario 2 -->
+
+                                        <!-- Configuracion acordeon obituario 3 -->
+                                            <div class="panel panel defeault">
+                                              <div class="panel-heading" role="tab" id="obituario2">
+                                                <h4 class="panel-title">
+                                                  <a href="#despliegue3" data-toggle="collapse" data-parent="#accordion">
+                                                    Laura Jineth Quintana Lopez
+                                                  </a>
+                                                  <span class="caret"></span>
+                                                </h4>
+                                              </div>
+                                              <div id="despliegue3" class="panel-collapse collapse ">
+                                                <div class="panel-body">
+                                                  <div class="obituarios-datos col-md-3">
+                                                    <h5>Laura Jineth Quintana Lopez</h5>
+                                                    <h5>Descansó en la paz del Señor</h5>
+                                                    <h5>Junio 15 de 2017</h5>
+                                                    <h5>Bucaramanga</h5>
+                                                  </div>
+                                                  <div class="obituarios-datos col-md-3">
+                                                    <h5>Exequias:</h5>
+                                                    <h5>PARROQUIA NUESTRA SEÑORA DEL PERPETUO SOCORRO</h5>
+                                                  </div>
+                                                  <div class="obituarios-datos col-md-2">
+                                                    <h5>Hora:</h5>
+                                                    <h5>4:00 pm</h5>
+                                                  </div>
+                                                  <div class="obituarios-datos col-md-2">
+                                                    <h5>Destino final:</h5>
+                                                    <h5>JARDINES LA COLINA. LOTE.</h5>
+                                                  </div>
+                                                  <div class="obituarios-datos col-md-2">
+                                                    <h5>Hora:</h5>
+                                                    <h5>4:50 pm</h5>
+                                                  </div>
+
+                                                </div>
+                                              </div>
+                                            </div>
+                                        <!-- fin configuracion obituario 3 -->
+                                  </div>
+                            </div>
+
+                            <div class="col-md-1"></div>
+
+                            <div class="panel panel-default obituarios col-md-3">
+                              <div class="panel-heading">
+                                <h2>Red de apoyo para el duelo</h2>
+                              </div>
+                              <div class="panel-body">
+                                <a href="#"><h3 class="color-red"> Visita Nuestro blog para conocer mas</h3></a>
+                              </div>
+                            </div>
+                    </div>
+
+                  <div class="row">
+
+                    <div class="noticias col-md-8">
+
+                      <div class="col-md-6">
+                        <h2>Noticias</h2>
+                        <h3>Apertura Nueva Sede</h3>
+                        <img src="resources/Imgs/Sede.jpg" class="img-responsive-velacion img-thumbnail" alt="Velacion"/>
+                        <a href="#"><h4>Conocela aquí</h4></a>
+                      </div>
+                      <div class="col-md-6">
+                        <h2>Servicios</h2>
+                        <h3>Solicite su cotizacion</h3>
+                        <img src="resources/Imgs/Cotizacion.jpg" alt="cotizacion" class="Img-cotizacion img-thumbnail"/>
+                        <a href="#"><h4>Ingresa aqui y conoce más</h4></a>
+                      </div>
+
+                    </div>
+
+                    <div class="ser_cli col-md-4  lin2 ">
+                      <h2>Servicio al Cliente</h2>
+                      <h3>Escribenos</h3>
+                        <img src="resources/Imgs/Atencion.jpg" class="img-responsive-velacion -atencion img-thumbnail" alt="Atencion al cliente"/>
+                        <div >
+                          <div class="col-md-4">
+                            <h4>Bogotá</h4>
+                            <h4>748 4000</h4>
+                          </div>
+                          <div class="col-md-6">
+                            <h4>Linea Nacional</h4>
+                            <h4>01 8000 910 571</h4>
+                          </div>
+                        </div>
+                    </div>
+
+
+                  </div>
+
+              </div>
+
+              </section>
+
+        <!-- fin de contenido principal -->
+
+        <!-- Ventana Modal para inicio de Sesion -->
+
+        <h:form  id="inisioSesion" role="form">
+            <p:growl id="mensaje" showDetail="true"></p:growl>
+                
+            <div class="modal fade" id="InicioSesion">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <button tyle="button" class="close" data-dismiss="modal" aria-label="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="modal-header">
+                            <img src="resources/Imgs/LogoFinalMorado.png" class="img-responsive" alt="Logo"/>
+                        </div>
+
+                        <div class="form-group">
+                            <p:outputLabel value="Usuario:" for="numeroIdentificacion" />
+                            <p:inputText id="numeroIdentificacion" value="#{usuarioController.usuario.numeroIdentificacion}"  title="numeroIdentificacion" required="true" requiredMessage="Numero de documento requerido" class="form-control-login" />
+                        </div>
+
+                        <div class="form-group-inicio-sesion">
+                            <p:outputLabel value="Clave:" for="clave" />
+                            <p:inputText id="clave" value="#{usuarioController.usuario.clave}"  title="Clave" required="true" requiredMessage="Contraseña obligatoria" type="password" class="form-control-login"/>
+                        </div>
+
+                        <div class="form-group form-inline ingresar-inicio-sesion">
+                            <h:commandButton class="btn-ingresar btn-primary" id="btnIngresar" value="Ingresar" action="#{usuarioController.iniciarSesion()}"></h:commandButton>
+
+                            <div class="checkbox ">
+                                <label>
+                                    <input type="checkbox" name="" value=""/> Recordar
+                                </label>
+                            </div>
+                            <div class="form-group form-inline">
+                                <a href="#"><h5>Olvide mi contraseña</h5></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </h:form>
+
+        
+        <!-- Cierre Ventana Modal para Inicio de Sesion -->
+
+
+        <footer>
+
+            <div class="container footer">
+              <div class="row">
+                <div class="col-md-3">
+
+                    <h4>Redes Sociales</h4>
+                    <div>
+                    <img src="resources/Imgs/facebook.png" class="img-responsive-redes " alt="facebook"/> Facebook
+                    </div>
+                    <div>
+                    <img src="resources/Imgs/Twitter.png" class="img-responsive-redes" alt="Twitter"/> Twitter
+                    </div>
+                    <div>
+                    <img src="resources/Imgs/Youtube.png" class="img-responsive-redes" alt="Youtube"/> Youtube
+                    </div>
+
+                </div>
+                <div class="col-md-3  ">
+                    <h4>Contactenos</h4>
+                    <h5>Liena Nacional</h5>
+                    <h5>01 8000 910 571</h5>
+                    <h5>Ver todas las Sedes</h5>
+
+                </div>
+                <div class="col-md-3">
+                    <h4>Sede Principal</h4>
+                    <h5>Cra 7 71 26 Piso 10</h5>
+                    <h5>Telefono: 8496326 - 7552369</h5>
+                    <h5>Bogotá - Colombia</h5>
+
+                </div>
+                <div class="col-md-3 ">
+                    <h4>Conoce nuestra politica de Seguridad de Datos</h4>
+                    <h4 class="glyphicon glyphicon-copyright-mark"> Todos los derechos reservados </h4>
+
+                </div>
+              </div>
+            </div>
+
+        </footer>
+
+        <script src="resources/js/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
+        <script src="resources/js/personalizados.js"></script>
+        <script src="resources/js/sweetalert.min.js"></script>
+
+    </h:body>
+</html>
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/resources/template/template.xhtml"    
+                xmlns="http://www.w3.org/1999/xhtml" 
+                xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:define name="Ver_Mis_Datos"> 
+
+
+
+
+        <!--Inicio jumbotron -->
+
+        <section>
+            <div class= "jumbotron-principal">
+                <div class="container">
+                    <h2 class="bienvenido">Tus datos!</h2>
+                </div>
+            </div>
+        </section>
+
+        <!--Inicio jumbotron  -->
+        <section>
+            <div class="row-titulo">
+                <img  src=" #{request.contextPath}/resources/Imgs/Mis_datos_Usuario.png"  height="140" width="140"  alt=""></img>
+                <div class="titulo">
+                    Datos Basicos
+                </div>
+            </div>
+        </section> 
+        <!-- INICIO DE FORMULARIO--> 
+        <section >
+            <div class="container" >    
+                <br></br>
+                <h:form id="registrationForm" class="form-horizontal" prependId="false">                  
+
+                    <div class="container">
+
+
+                        <label for="tipoDocumento" class="control-label col-md-3">Tipo de Documento: </label> 
+                        <div class="col-md-3">          
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.idTipoDocumento.nombre}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+
+                        <label for="Numero de Documento" class="control-label col-md-3">Numero de Documento: </label> 
+                        <div class="col-md-3">
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.numeroIdentificacion}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+
+                        <label for="nombre" class="control-label col-md-3">Nombres: </label>
+                        <div class="col-md-3">
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.nombre}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+
+                        <label for="Apellido" class="control-label col-md-3">Apellidos: </label> 
+                        <div class="col-md-3">
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.apellido}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+
+
+
+                        <label for="Fecha de Nacimiento" class="control-label col-md-3">Fecha de Nacimiento: </label>
+                        <div class="col-md-3">
+                            <h:outputText  class="form-control"  value="#{usuarioController.usuarioSesion.fechaNacimiento}" a:readOnly ="true" style="background-color: #fff;">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </div>          
+
+                        <label for="Edad" class="control-label col-md-3">Edad: </label> 
+                        <div class="col-md-3">
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.edad}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+
+
+                        <label for="Direccion" class="control-label col-md-3">Direccion: </label>
+                        <div class="col-md-3">
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.direccion}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+                        <label for="Ciudad" class="control-label col-md-3">Ciudad: </label> 
+                        <div class="col-md-3">          
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.idCiudad.nombre}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+                    </div>  
+                    <div class="container">
+                        <label for="TelefonoFijo" class="control-label col-md-3">Telefono Fijo: </label>
+                        <div class="col-md-3">
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.telefonoFijo}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+
+                        <label for="TelefonoCelular" class="control-label col-md-3">Telefono Celular: </label>
+                        <div class="col-md-3">
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.telefonoCelular}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+
+
+                        <label for="Correo Electronico" class="control-label col-md-3">Correo Electronico: </label> 
+                        <div class="col-md-3">
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.correo}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+
+                        <label  class="control-label col-md-3">Genero: </label>
+                        <div class="col-md-3">
+                            <h:outputText class="form-control"  value="#{usuarioController.usuarioSesion.genero}" a:readOnly ="true" style="background-color: #fff;"/>
+                        </div>
+                    </div>  
+
+                    <br></br>
+                    <br></br>
+                    <br></br>
+
+
+                    <div class="container">
+
+
+                        <div class="row">
+                            <div class="col-lg-4">         
+
+                            </div> 
+                            <div class="col-lg-4">        
+                            </div>
+                            <div class="col-lg-4">
+
+                                <div class="media">
+                                    <div class="media-right">
+                                        <a title="Cerrar" href="Principal_Usuario.xhtml" class="btn btn-md btn-primary">Cerrar</a>                                
+
+
+                                    </div>
+
+                                    <div class="media-right">
+
+                                        <a title="Actualizar" href="Actualiza_Mis_Datos.xhtml" class="btn btn-md btn-primary" >Actualiza</a>                                
+                                    </div>
+
+                                </div>
+
+                            </div> 
+                        </div>
+                    </div>  
+
+                </h:form> 
+            </div> 
+
+        </section> 
+
+        <br></br>
+        <br></br>  
+
+
+
+
+
+    </ui:define>      
+</ui:composition>

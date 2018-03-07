@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/resources/template/template.xhtml"    
+                xmlns="http://www.w3.org/1999/xhtml" 
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:define name="Usu_Beneficiarios"> 
+
+
+
+        <!--Inicio jumbotron -->
+
+        <section>
+            <div class= "jumbotron-principal">
+                <div class="container">
+                    <h2 class="bienvenido">Tus beneficiarios!</h2>
+                </div>
+            </div>
+        </section>
+
+        <!--Inicio jumbotron  -->
+
+
+
+        <br></br>
+        <br></br>
+
+        <section>
+
+            <div class="container">      
+                <a class=" img-centrar"><img  src="#{request.contextPath}/resources/Imgs/Beneficiarios_Usuario.png" height="140" width="140"  alt=""></img></a> 
+            </div>
+
+        </section> 
+
+        <section>
+            <div class="container">
+                <h1 class="text-center">Beneficiarios</h1>
+            </div>
+        </section>
+
+
+
+        <!-- INICIO DE FORMULARIO-->
+
+
+        <div class="container">
+            <div class="table-responsive">   
+                <h:form>
+                    <p:dataTable class="table table-bordered" id="tabla"  value="#{beneficiarioController.listarBeneficiario()}" var="item">
+
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="TipoDocumento"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tipoDocumento}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="NumeroIdentificacion"/>
+                            </f:facet>
+                            <h:outputText value="#{item.numeroIdentificacion}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Nombre"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nombre}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Apellido"/>
+                            </f:facet>
+                            <h:outputText value="#{item.apellido}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="FechaNacimiento"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fechaNacimiento}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Edad"/>
+                            </f:facet>
+                            <h:outputText value="#{item.edad}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Genero"/>
+                            </f:facet>
+                            <h:outputText value="#{item.genero}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Direccion"/>
+                            </f:facet>
+                            <h:outputText value="#{item.direccion}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Ciudad"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ciudad}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="TelefonoFijo"/>
+                            </f:facet>
+                            <h:outputText value="#{item.telefonoFijo}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="TelefonoCelular"/>
+                            </f:facet>
+                            <h:outputText value="#{item.telefonoCelular}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Correo"/>
+                            </f:facet>
+                            <h:outputText value="#{item.correo}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Parentesco"/>
+                            </f:facet>
+                            <h:outputText value="#{item.parentesco}"/>
+                        </p:column>
+                        <p:column>
+
+                            <a title="Cerrar" href="Principal_Usuario.xhtml" class="btn btn-md btn-primary">Cerrar</a>                                
+
+                            <a title="Crear" href="Crear_Beneficiario.xhtml" class="btn btn-md btn-primary">Crear</a>                                
+
+                            <p:commandButton value="Eliminar" action="#{beneficiarioController.eliminarPersona(item)}"></p:commandButton>
+
+                            <p:commandButton title="Actualizar" class="btn btn-md btn-primary" action="#{beneficiarioController.editarPersona(item)}"  value="Actualizar"></p:commandButton>
+
+                        </p:column>
+                    </p:dataTable>
+
+                </h:form>
+            </div>     
+        </div>
+
+
+
+
+        <br></br>
+        <br></br>
+
+
+
+    </ui:define>      
+</ui:composition>

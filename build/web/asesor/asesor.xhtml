@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/WEB-INF/resources/template/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+                 
+    <ui:define name="asesor">
+        <div class="fondo">
+            <div class="caja">
+                <div class="row-opciones">
+                    <h1 >Asesor de duelo</h1>
+                </div>
+
+                <div class="modulos col-lg-12">
+                    <div class="row-opciones">
+                        <div class="opciones genServicio col-lg-4" type="button" data-toggle="modal" data-target="#generarServicio">
+                            <div class="icono">
+                                <i class="fa fa-file-text-o fa-4x" aria-hidden="true" style="color: white;"></i>
+                            </div>
+                            <h3>
+                                <span>Generar servicio</span>
+                            </h3>
+                        </div>
+                        
+                        <div class="opciones busServicio col-lg-4" type="button" data-toggle="modal" data-target="#buscarServicio">
+                            <div class="icono">
+                                <i class="fa fa-search fa-4x" aria-hidden="true" style="color: white;"></i>
+                            </div>
+                            <h3>
+                                <span>Buscar servicio</span>
+                            </h3>
+                        </div>
+
+                        <div class="opciones busUsuario col-lg-4" data-toggle="modal" data-target="#buscarUsuario" >
+                            <div class="icono btn" data-toggle="modal" data-target=".bd-example-modal-sm">
+                                <i class="fa fa-user-o fa-4x" aria-hidden="true" style="color: white;"></i>
+                            </div>
+                            <h3>
+                                <span>Buscar usuario</span>
+                            </h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- inicio ventanas modales -->
+
+        <!-- modal buscar usuario -->
+
+        <div class="modal fade" tabindex="-1" id="buscarUsuario" role="dialog" aria-labelledby="buscUsur" aria-hidden="true">
+            <div class="modal-dialog-asesor" role="document">
+                <div class="modal-content">
+                    <div class="modal-header-asesor">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h3 class="modal-title-asesor" id="buscUsur">Buscar Usuario</h3>
+                    </div>
+                    <div class="modal-body row-opciones">
+                        <div class="form-group">
+                            <form role="role" name="TipDoc" method="get" id="numeroDoc">
+                                <select class="selectpicker" title="Tipo de Documento" name="tipoDoc" id="tipoDoc">
+                                    <option>Cedula</option>
+                                    <option>Cedula Extranjeria</option>
+                                    <option>Registro Civil</option>
+                                    <option>Tarjeta de Identidad</option>
+                                    <option>Nit</option>
+                                </select>
+                                <input class="buscar linea control-label" type="text" name="ingresar" value="" id="numDocumento"/>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="buscarUsu()">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal buscar servicio -->
+
+        <div class="modal fade " id="buscarServicio" tabindex="-1" role="dialog" aria-labelledby="BusServicio" aria-hidden="true">
+            <div class="modal-dialog-asesor" role="document">
+                <div class="modal-content">
+                    <div class="modal-header-asesor">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h3 class="modal-title-asesor" id="BusServicio">Buscar Servicio</h3>
+                    </div>
+                    <div class="modal-body row-opciones">
+                        <div class="form-group">
+                            <form role="role" name="busServ" method="get" id="servicio" class="buscarServi">
+                                <div class="form-group">
+                                    <span>Codigo: </span>
+                                </div>
+                                <input class="buscar linea" type="text" name="ingresar" value="" id="codServicio"/>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="buscarServ()">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nuevo servicio -->
+
+        <div class="modal fade " id="generarServicio" tabindex="-1" role="dialog" aria-labelledby="genServ" aria-hidden="true">
+            <div class="modal-dialog-asesor" role="document">
+                <div class="modal-content">
+                    <div class="modal-header-asesor">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h3 class="modal-title-asesor" id="genServ">Generar Servicio</h3>
+                    </div>
+                    <div class="modal-body row-opciones">
+                        <div class="form-group">
+                            <form role="role" name="genServ" method="get" >
+                                <div class="form-group">
+                                    <select name="tipoDoc" id="opcCodigos" class="selectpicker" title="Tipo Documento">
+                                        <option>Cedula</option>
+                                        <option>Codigo Contrato</option>
+                                    </select>
+                                </div>
+                                <input class="buscar linea" type="text" name="ingresar" value="" id="nuevoServicio"/>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="genServicio()">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin ventana modales -->
+    </ui:define>
+   
+</ui:composition>
+

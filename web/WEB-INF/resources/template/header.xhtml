@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             xmlns:p="http://primefaces.org/ui">  
+           <header>
+         <h:form>
+             <p:growl id="mensaje" showDetail="true"></p:growl>
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+              <div class="navbar-header">
+                <img class="img-responsive-logo" src="../resources/Imgs/Logo4.png" alt=""/>
+              </div>
+
+              <div class="navbar-collapse navbar-right ">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                      <a ><h:outputText id="txtNombre" value="#{usuarioController.usuarioSesion.nombre} #{usuarioController.usuarioSesion.apellido}"/></a>
+                  </li>
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="opciones" data-toggle="dropdown" aria-extended="true">
+                      <i class="fa fa-user-circle-o fa fa-2x" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="opciones">
+                      <li><a href="#">Datos</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a><h:commandButton id="btnCerrarSesion" action="#{usuarioController.cerrarSesion()}" value="Cerrrar Sesion" styleClass="btnCerrarSesion"></h:commandButton></a></li>
+                    </ul>
+                  </div>
+                </ul>
+              </div>
+              </div>
+            </nav>             
+         </h:form>        
+        </header>
+</ui:fragment>
+

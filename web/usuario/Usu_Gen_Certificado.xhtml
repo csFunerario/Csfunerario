@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/resources/template/template.xhtml"    
+      xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:define name="Usu_Gen_Certificado"> 
+        
+        
+
+
+        <!--Inicio jumbotron -->
+
+         <section>
+            <div class= "jumbotron-principal">
+                <div class="container">
+                    <h2 class="bienvenido">Tus Certificados!</h2>
+                </div>
+            </div>
+         </section>
+        <!--Inicio jumbotron  -->
+
+
+
+        <br></br>
+        <br></br>
+       
+        <section>
+
+            <div class="container">      
+                <a class="img-centrar"><img  src="#{request.contextPath}/resources/Imgs/Gen_certificado_Usuario.png" height="140" width="140"  alt=""></img></a> 
+            </div>
+
+        </section> 
+
+        <section>
+            <div class="container">
+                <h1 class="text-center">Generar Certificados</h1>
+            </div>
+        </section>
+
+
+
+                <!-- INICIO DE FORMULARIO-->
+        <div class="container">
+          <div class="table-responsive">     
+             <table class="table table-bordered" id="tabla">
+                        <thead>
+
+                        <th>Nombre</th>
+                        <th>Apellido</th> 
+                        <th>Cedula</th>
+                        <th>Telefono</th>            
+                        <th>Correo</th>
+                        <th>Direccion</th>
+                        <th>Ciudad</th>
+                        <th>Opciones</th>
+
+                        </thead>
+
+                        <tbody id="tbody">
+                            <tr>
+
+                                <td class="active">Janel</td>
+                                <td class="active">Molina</td>
+                                <td class="active">1019453675</td>
+                                <td class="active">31245326715</td>
+                                <td class="active">Janel@outlook.com</td>
+                                <td class="active">Cra 2 # 12-45</td>
+                                <td class="active">Bogota</td>
+
+                                <td>      
+
+                                    <button class="btn btn-primary active edit" value="editar" onclick="editar();"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></button>                          
+
+                                    <button class="btn btn-info active add" value="agregar" onclick="agregar();"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+
+                                </td>      
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>     
+            </div>
+
+
+        <br></br>
+        <br></br>
+        <div class="container-fluid">
+
+            <div class="row">       
+                <div class="col-lg-7"> 
+
+                    <div class="navbar-right">
+                        <a title="mis datos" href="Principal_Usuario.xhtml" class="btn btn-md  btn-primary">Cerrar</a> 
+
+                    </div>      
+
+                </div> 
+            </div>
+        </div> 
+
+        <br></br>
+        <br></br>
+
+        
+    </ui:define>      
+</ui:composition>

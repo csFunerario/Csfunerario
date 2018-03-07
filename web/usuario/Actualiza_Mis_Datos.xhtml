@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/resources/template/template.xhtml"    
+                xmlns="http://www.w3.org/1999/xhtml" 
+                xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:define name="Actualiza_Mis_Datos"> 
+
+
+
+        <!--Inicio jumbotron -->
+
+        <section>
+            <div class= "jumbotron-principal">
+                <div class="container">
+                    <h2 class="bienvenido">Tus datos!</h2>
+                </div>
+            </div>
+        </section>
+
+        <!--Inicio jumbotron  -->
+        <section>
+            <div class="row-titulo">
+                <img  src=" #{request.contextPath}/resources/Imgs/Mis_datos_Usuario.png"  height="140" width="140"  alt=""></img>
+                <div class="titulo">
+                    Actualizacion de datos
+                </div>
+            </div>
+        </section> 
+        <br></br>
+        <!-- INICIO DE FORMULARIO--> 
+        <section >
+            <div class="container" >    
+                <br></br>
+                <h:form id="registrationForm" class="form-horizontal" prependId="false">                  
+                    <p:growl id="mensajes" showDetail="true"></p:growl>
+                    <div class="container">
+
+                        <label for="idTipoDocumento" class="control-label col-md-3">Tipo de Documento: </label> 
+                        <div class="col-md-3">  
+                            <p:inputText class="form-control" id="idTipoDocumento" value="#{usuarioController.usuarioSesion.idTipoDocumento.nombre}" a:readOnly ="true" style="background-color: #fff;" title="TipoDocumento" required="true" requiredMessage="The TipoDocumento field is required."/>
+
+                        </div>    
+
+
+                        <label for="numeroIdentificacion" class="control-label col-md-3">Numero de Documento: </label> 
+                        <div class="col-md-3">
+                            <p:inputText class="form-control" id="numeroIdentificacion" value="#{usuarioController.usuarioSesion.numeroIdentificacion}" a:readOnly ="true" style="background-color: #fff;" title="NumeroIdentificacion" required="true" requiredMessage="The NumeroIdentificacion field is required."/>
+                        </div>
+
+                    </div>
+
+                    <div class="container">
+
+
+                        <label for="nombre" class="control-label col-md-3">Nombres: </label>
+                        <div class="col-md-3">
+                            <p:inputText class="form-control" id="nombre" value="#{usuarioController.usuarioSesion.nombre}" a:readOnly ="true" style="background-color: #fff;" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
+
+                        </div>
+
+                        <label for="Apellido" class="control-label col-md-3">Apellidos: </label> 
+                        <div class="col-md-3">
+                            <p:inputText class="form-control" id="Apellido" value="#{usuarioController.usuarioSesion.apellido}" a:readOnly ="true" style="background-color: #fff;" title="Apellido" required="true" requiredMessage="The Apellido field is required."/>
+                        </div>
+
+
+
+                        <label for="FechadeNacimiento" class="control-label col-md-3">Fecha de Nacimiento: </label>
+                        <div class="col-md-3">
+                            <p:inputText class="form-control" id="FechadeNacimiento" value="#{usuarioController.usuarioSesion.fechaNacimiento}" a:readOnly ="true" style="background-color: #fff;" title="fechaNacimiento" required="true" requiredMessage="The fechaNacimiento field is required.">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </p:inputText>
+                        </div>          
+
+                        <label for="Edad" class="control-label col-md-3">Edad: </label> 
+                        <div class="col-md-3">
+                            <p:inputText class="form-control" id="Edad" value="#{usuarioController.usuarioSesion.edad}" a:readOnly ="true" style="background-color: #fff;" title="Edad" required="true" requiredMessage="The Edad field is required."/>
+                        </div>
+
+
+                        <label for="Direccion" class="control-label col-md-3">Direccion: </label>
+                        <div class="col-md-3">
+                            <p:inputText class="form-control" id="Direccion" value="#{usuarioController.usuarioSesion.direccion}"  style="background-color: #fff;" title="Direccion" required="true" requiredMessage="The Direccion field is required."/>
+                        </div>
+
+                        <label for="Ciudad" class="control-label col-md-3">Ciudad: </label> 
+                        <div class="col-md-3">          
+                            <h:selectOneMenu class="form-control"  id="Ciudad" value="#{usuarioController.ciudad.idCiudad}" required="true" requiredMessage="The Ciudad field is required.">
+                                <f:selectItems value="#{ciudadController.listarCiudad()}" var="ciudad" itemValue="#{ciudad.idCiudad}" itemLabel="#{ciudad.nombre}"/>
+                            </h:selectOneMenu>                        
+                        </div>  
+
+                    </div>  
+                    <div class="container">
+                        <label for="TelefonoFijo" class="control-label col-md-3">Telefono Fijo: </label>
+                        <div class="col-md-3">
+                            <p:inputText class="form-control" id="TelefonoFijo" value="#{usuarioController.usuarioSesion.telefonoFijo}"  style="background-color: #fff;" title="TelefonoFijo" required="true" requiredMessage="The TelefonoFijo field is required."/>
+                        </div>
+
+                        <label for="TelefonoCelular" class="control-label col-md-3">Telefono Celular: </label>
+                        <div class="col-md-3">
+                            <p:inputText class="form-control" id="TelefonoCelular" value="#{usuarioController.usuarioSesion.telefonoCelular}"  style="background-color: #fff;" title="TelefonoCelular" required="true" requiredMessage="The TelefonoCelular field is required."/>
+                        </div>
+
+
+                        <label for="Correo" class="control-label col-md-3">Correo Electronico: </label> 
+                        <div class="col-md-3">
+                            <p:inputText class="form-control" id="Correo" value="#{usuarioController.usuarioSesion.correo}"  style="background-color: #fff;" title="Correo" required="true" requiredMessage="The Correo field is required."/>
+                        </div>
+
+                        <label for="genero" class="control-label col-md-3">Genero: </label>
+                        <div class="col-md-3">
+                            <p:inputText class="form-control" id="genero" value="#{usuarioController.usuarioSesion.genero}" a:readOnly ="true" style="background-color: #fff;" title="genero" required="true" requiredMessage="The genero field is required."/>
+                        </div>
+                    </div>  
+
+                    <br></br>
+                    <br></br>
+                    <br></br>
+
+
+                    <div class="container">
+
+
+                        <div class="row">
+                            <div class="col-lg-4">         
+
+                            </div> 
+                            <div class="col-lg-4">        
+                            </div>
+                            <div class="col-lg-4">
+
+                                <div class="media">
+                                    <div class="media-right">
+                                        <a title="Cerrar" href="Ver_Mis_Datos.xhtml" class="btn btn-md btn-primary" >Cerrar</a>                                
+
+                                    </div>
+
+                                    <div class="media-right">
+                                        <a><h:commandButton title="Actualizar" class="btn btn-md btn-primary" action="#{usuarioController.editarUsuario()}"  value="Actualizar"></h:commandButton></a>
+                                    </div>
+
+                                </div>
+
+                            </div> 
+                        </div>
+                    </div>  
+
+                </h:form> 
+            </div> 
+
+        </section> 
+
+        <br></br>
+        <br></br>  
+
+
+    </ui:define>      
+</ui:composition>

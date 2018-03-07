@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <h:head>
+        <ui:include src="head.xhtml"/>
+    </h:head>
+    <h:body class="container">
+
+        <!-- Barra de navegacion -->
+        <header >
+            <ui:include src="header.xhtml"/>
+        </header>
+        <!-- Fin Barra Navegacion -->
+
+        <div class="container plantilla">
+            <ui:insert name="asesor"/>
+            <ui:insert name="radicador"/>
+            <ui:insert name="admin-info"/>
+            <ui:insert name="admin-ini"/>
+            <ui:insert name="admin-usuarios"/>
+            <ui:insert name="Principal_Usuario"/>
+            <ui:insert name="Ver_Mis_Datos"/>
+            <ui:insert name="Actualiza_Mis_Datos"/>
+            <ui:insert name="Usu_Beneficiarios"/>
+            <ui:insert name="Usu_Gen_Certificado"/>
+            <ui:insert name="Usu_Gen_Facturas"/>
+            <ui:insert name="Usu_Servicios"/>
+        </div>
+        
+        <!-- footer -->
+        <footer>
+            <ui:include src="footer.xhtml"></ui:include>
+        </footer>
+        <!-- fin footer -->
+
+
+        <script src="../resources/js/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+        <script src="../resources/js/bootstrap.min.js"></script>
+        <script src="../resources/js/personalizados.js"></script>
+        <script src="../resources/js/sweetalert.min.js"></script>
+        <script src="../resources/js/formValidation.min.js"></script>
+        <script src="../resources/js//bootstrap_framefv.min.js"></script>
+        <script src="../resources/js/prog.beneficiario.js" charset="utf-8"></script>  
+        <script src="../resources/js/valid_beneficiario.js" ></script>  
+        <script src="../resources/js/validador_campo.js" ></script> 
+        <script src="../resources/js/prog.Actuliza_us.js" ></script>         
+        <script src="../resources/js/radicador.js"></script>
+        <script src="../resources/js/jquery.cookie.js"></script>
+        <script src="../resources/js/charts-home.js"></script>
+        <script src="../resources/js/bootstrap-select.min.js"></script>
+        <script src ="https://use.fontawesome.com/99347ac47f.js"></script>
+        <script src="../resources/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+        <script src="../resources/js/jquery.nicescroll.min.js"></script>
+        <script src="../resources/js/jquery.validate.min.js"></script>
+        <script src="../resources/js/fronts.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <script src="../resources/js/tether.min.js"></script>
+        <script src="../resources/js/charts-custom.js" ></script>
+        
+        <script>
+(function (b, o, i, l, e, r) {
+    b.GoogleAnalyticsObject = l;
+    b[l] || (b[l] =
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+    b[l].l = +new Date;
+    e = o.createElement(i);
+    r = o.getElementsByTagName(i)[0];
+    e.src = 'http://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e, r)
+}(window, document, 'script', 'ga'));
+ga('create', 'UA-XXXXX-X');
+ga('send', 'pageview');
+        </script>
+    </h:body>
+</html>
+

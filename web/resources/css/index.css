@@ -1,0 +1,430 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #542463;
+}
+
+footer {
+    background-color: #542463;
+    color: #fff;
+}
+
+/*Inicio Barra de Navegacion*/
+.navbar {
+
+    position: relative;
+    min-height: 55px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-fixed-top {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 10px 10px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.navbar-right {
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a {
+    color: #fff;
+    background-color: transparent;
+    padding: 10px;
+}
+.img-responsive-slider, .thumbnail a > img, .thumbnail > img {
+    max-width: 160px;
+    max-height: 400px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #555;
+    background-color: #542463;
+    color: #FFF;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    margin: auto;
+    padding: 8px;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a {
+    color: #542463;
+    background-color: #fff;
+    border-color: #542463;
+    padding: 6px;
+    margin-top: 8px;
+    width: 85px;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #fff;
+    background-color: #542463;
+    border-color: #fff;
+}
+.buscar{
+
+    color: #fff;
+    background-color: #542463;
+    border-color: #542463;
+}
+
+.btn-default:hover {
+    color: #542463;
+    background-color: #fff;
+    border-color: #542463;
+}
+.btn.focus, .btn:focus, .btn:hover {
+    color:#542463;
+    border-color: #542463;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+/*fin barra de navegacion*/
+
+/*Inicio Ventena Modal*/
+.modal-content {
+    background-color: #DDD4E6;
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    width: 55%;
+    padding: 30px;
+    padding-top: 10px;
+    margin: auto;
+}
+.modal-header {
+    padding-top: 30px;
+    border-bottom: transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 30px;
+}
+.form-control-login {
+    display: block;
+    width: 70%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin: auto;
+    line-height: 1.42857143;
+    color: #542463;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #542463;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px #542463;
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.form-control-login::-moz-placeholder {
+    color: #542463;
+    opacity: 1;
+}
+.ingresar-inicio-sesion {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+.btn-primary{
+    color: #fff;
+    background-color: #542463;
+    border-color: #fff;
+}
+
+.btn-primary:hover {
+    color: #000;
+    background-color: #EFEFFFE6;
+    border-color: #542463;
+}
+.btn-ingresar {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+a {
+    color: #542463;
+}
+
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #542463;
+}
+
+/*Fin Ventana Modal*/
+.img-responsive-logo, .thumbnail a > img, .thumbnail > img {
+    display: block;
+    width: 200px;
+    height: 12 00px;
+    margin-left: 50px;
+}
+
+.img-responsive-redes, .thumbnail a > img, .thumbnail > img {
+    display: inline-block;
+    max-width: 30px;
+    height: 12 00px;
+}
+
+.img-responsive-atencion{
+
+    display: block;
+    height: 180px;
+    margin-bottom: 5px;
+    margin: auto;
+
+}
+
+.lin1{
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+.lin2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.red-apoy{
+    background-color: ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+
+}
+
+.obituarios{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.Img-cotizacion{
+    display: block;
+    height: 180px;
+}
+
+.img-responsive-velacion{
+    display: block;
+    height: 180px;
+}
+
+.col-md-12 {
+    width: 100%;
+    padding: 0;
+    max-height: 400px;
+}
+
+.panel-group .panel-heading {
+    border-bottom: 0;
+    background-color: #542463;
+}
+
+.panel-body {
+    border-top: 1px solid #542463;
+    background-color: #542463;
+}
+.obituarios-datos{
+    display: inline-block;
+}
+
+.panel-default {
+    border-color: #ddd;
+    padding: 0;
+}
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: #AB9FB5;
+    border-color: #000;
+}
+
+.panel-body-obituarios-datos{
+    border-top: 1px solid #542463;
+    background-color: #542463;
+    color: #FFF;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: Black;
+}
+.color-red{
+    font-size: 24px;
+    color: #FFF;
+}
+
+.form-inline .checkbox label, .form-inline .radio label {
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.form-group-inicio-sesion {
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+.dropbtn {
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border-color: #fff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.btn-default-dropdown:hover{
+    background-color: #AB9FB5;
+    color: #000;
+
+}
+.btn-default-inicioSesion {
+    color: #333;
+    font-size: 18px;
+    border-color: #AB9FB5;
+
+}
+.btn-default-inicioSesion:hover {
+    color: #FFF;
+    background-color: #542463;
+    border-color: #adadad;
+    font-size: 18px;
+}
+.btn-default-inicio {
+    color: #FFF;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.btn-default-inicio:hover {
+    color: #fff;
+    text-decoration: none;
+    border-color: #fff;
+    background-color: #542463;
+
+}
+
+/*Submenus*/
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+/*fin submenus*/

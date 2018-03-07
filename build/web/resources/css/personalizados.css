@@ -1,0 +1,257 @@
+body{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Incico barra de navegacion*/
+.container{
+	background-color: #f1eFFF;
+	max-width: 1300px;
+	height: 100%;
+	justify-content: center;
+	justify-content: space-between;
+	margin: auto;
+}
+
+.navbar {
+  position: relative;
+	max-width: 1200px;
+  min-width: 1130px;
+  margin-bottom: 0;
+	padding-top: 5px;
+  background-color: #fff;
+  border-color: #fff;
+  -webkit-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+  -moz-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+  box-shadow: 2px 2px 3px 2px rgb(163, 163, 163);
+	border-radius: 0 0 5px 5px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    font-size: 17px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #51225f;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+        border-bottom-color: rgb(221, 221, 221);
+    border-bottom-color: transparent;
+}
+
+.navbar-text {
+    margin-top: 15px;
+    margin-bottom: 0px;
+		color: #51225f;
+}
+
+.navbar-default .navbar-text {
+    color: #51225f;
+}
+
+.img-responsive-logo, .thumbnail a > img, .thumbnail > img {
+    display: block;
+    width: 200px;
+    margin-left: 50px;
+}
+
+.menu{
+	width: 100px;
+	margin: auto;
+}
+
+a {
+    color: #51225f;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+/*Fin Barra de Navegacion*/
+
+/*Inicio titulo*/
+
+.tittle {
+
+	max-width: 80%;
+	height: 700px;
+	padding: 10px;
+	background-color: #fff;
+	margin: auto;
+	margin-top: 20px;
+	border-radius: 10px 10px 10px 10px;
+	border: 2px solid #AB9FB5;
+	-webkit-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+  -moz-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+  box-shadow: 2px 2px 3px 2px rgb(163, 163, 163);
+
+}
+
+h1{
+	margin: auto;
+	color: #51225f;
+	font-size: 80px;
+}
+/*Fin Titulo*/
+
+/*inicio modulos*/
+
+.modulos{
+	max-width: 100%;
+	padding: 10px;
+	background-color: #fff;
+	border-radius: 10px 10px 10px 10px;
+	margin: auto;
+
+}
+
+.opciones{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 300px;
+	height: 250px;
+  justify-content: space-around;
+	border: 5px solid #AB9FB5;
+	border-radius: 10px ;
+	margin: 5px;
+}
+
+.icono{
+	width: 150px;
+	height: 150px;
+	background: #51225f;
+	border-radius: 50% 50%;
+	border:3px solid #fff ;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin: auto;
+    justify-content: center;
+}
+
+.icono:hover{
+	background: #AB9FB5;
+	transition: .5s;
+  border: 3px solid #51225f;
+}
+
+.opciones:hover{
+
+	background: #f1eFFF;
+	transition: .5s;
+  border: 4px solid #AB9FB5;
+	-webkit-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+  -moz-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+  box-shadow: 2px 2px 3px 2px rgb(163, 163, 163);
+}
+
+.genServicio{
+	width: 42%;
+}
+
+.busServicio{
+	width: 42%;
+}
+
+.busUsuario{
+	width: 86%;
+}
+
+elemento{
+    display: block;
+    padding-right: 0px;
+}
+/*fin modulos*/
+
+/*Ventanas Modales*/
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+		padding-right: 0;
+}
+
+
+.fade {
+    opacity: 0;
+    transition: opacity .15s linear;
+}
+
+
+
+.buscar {
+    margin: 10px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.linea {
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 5px;
+    border-top: transparent;
+    border-bottom-color: #000;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    margin: auto;
+		display: inline-block;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #AB9FB5;
+    border-color: #AB9FB5;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #51225f;
+    border-color: #51225f;
+}
+
+.buscarServi{
+	display: inline-block;
+}
+
+.modal-dialog {
+    width: 450px;
+    margin: 30px auto;
+}
+
+.modalesMargenes{
+    display: block;
+    padding-right: 0px;
+}
+
+/*fin ventana modales*/
+
+#loginForm .has-error .control-label,
+#loginForm .has-error .help-block,
+#loginForm .has-error .form-control-feedback {
+    color: #f39c12;
+}
+
+#loginForm .has-success .control-label,
+#loginForm .has-success .help-block,
+#loginForm .has-success .form-control-feedback {
+    color: #18bc9c;
+}

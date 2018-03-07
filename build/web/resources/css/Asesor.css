@@ -1,0 +1,388 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    /*padding-top: 50px;*/
+}
+html{
+    background-color: #EFEFFFE6;
+    margin: 0;
+}
+
+footer {
+    background-color: #fff;
+    color: #fff;
+    height: 50px;
+    box-shadow: 2px 2px 3px 2px rgb(163, 163, 163);
+    border-radius: 5px 5px 0 0;
+}
+.container {
+    width: 90%;
+    height: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: transparent;
+    justify-content: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+/*Nav bar*/
+.container {
+    width: 90%;
+    height: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: transparent;
+    justify-content: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.nav{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.navbar-default {
+    color: #fff;
+    background-color: #542463 ;
+    text-decoration: none;
+    border-color: #fff;
+}
+.navbar {
+    position: relative;
+    max-width: 100%;
+    min-width: 60%;
+    min-height: 55px;
+    margin-bottom: 0;
+    padding-top: 5px;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+    -moz-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+    box-shadow: 2px 2px 3px 2px rgb(163, 163, 163);
+    border-radius: 0 0 5px 5px;
+    border-color: transparent;
+    color: #51225f;
+}
+
+.img-responsive-logo {
+    display: block;
+    width: 200px;
+    height: 12 00px;
+    margin-left: 50px;
+}
+
+.navbar-default .navbar-text {
+    color: #51225f;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #51225f;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-color: transparent;
+    padding: 5px;
+    width: 250px;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 5px;
+}
+.navbar-collapse {
+    padding-top: 5px;
+    height: 10px;
+}
+
+.menu{
+    height: 50px;
+}
+a{
+    color: #51225f;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    width: 100px;
+    text-align: center;
+    width: 120px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #51225f;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-color: transparent;
+    padding: 5px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+    margin-bottom: -1px;
+    width: 310px;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    color: #fff;
+    background-color: #51225f;
+}
+
+.btn-default:hover {
+    color: #51225f;
+    background-color: #fff;
+    border-color: transparent;
+}
+.btn-default:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #51225f;
+}
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #51225f;
+}
+.dropdown-menu> li > a {
+    display: block;
+    padding: 0px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #51225f;
+    white-space: nowrap;
+    font-size: 18px;
+    width: 220px;
+}
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #51225f;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 0px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    margin-top: 2px;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+/*Fin Nav Bar*/
+
+/*inicio modulos*/
+
+.fondo {
+    max-width: 100%;
+    height: 517px;
+    padding: 10px;
+    background-color: transparent;
+    margin: auto;
+    margin-top: 8px;
+}
+
+.caja{
+    max-width: 90%;
+    height: 450px;
+    padding: 10px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid #AB9FB5;
+    -webkit-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+    -moz-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+    box-shadow: 2px 2px 3px 2px rgb(163, 163, 163);
+}
+h1{
+    margin: auto;
+    color: #51225f;
+    font-size: 80px;
+}
+
+.modulos{
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px 10px 10px 10px;
+    margin: auto;
+    justify-content: center;
+}
+
+.row-opciones {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin: auto;
+    justify-content: center;
+}
+
+.opciones {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 290px;
+    height: 250px;
+    justify-content: space-around;
+    border: 1px solid #AB9FB5;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.opciones:hover {
+    background: #f1eFFF;
+    transition: .5s;
+    border: 1px solid #AB9FB5;
+    -webkit-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+    -moz-box-shadow: 2px 3px 2px 2px rgb(163, 163, 163);
+    box-shadow: 2px 2px 3px 2px rgb(163, 163, 163);
+}
+
+.icono{
+    width: 150px;
+    height: 150px;
+    background: #51225f;
+    border-radius: 50% 50%;
+    border:3px solid #fff ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono:hover {
+    background: #AB9FB5;
+    transition: .5s;
+    border: 1px solid #51225f;
+}
+
+elemento{
+    display: block;
+    padding-right: 0px;
+}
+/*fin modulos*/
+
+/*footer*/
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 50px;
+}
+
+.col-md-4{
+    padding-top: 30px;
+    color: #51225f;
+    text-align: center;
+    font-size: 15px;
+}
+
+/*fin footer*/
+
+/*Ventanas Modales*/
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+    padding-right: 0;
+}
+.fade {
+    opacity: 0;
+    transition: opacity .15s linear;
+}
+.modal-header-asesor {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #51225f;
+}
+.modal-title-asesor {
+    margin: 0px;
+    line-height: 1.42857143;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+.buscar {
+    margin: 10px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.linea {
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 5px;
+    border-top: transparent;
+    border-bottom-color: #000;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    margin: auto;
+    display: inline-block;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #AB9FB5;
+    border-color: #AB9FB5;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #51225f;
+    border-color: #51225f;
+}
+
+.buscarServi{
+    display: inline-block;
+}
+
+.modal-dialog-asesor {
+    width: 450px;
+    margin: 30px auto;
+}
+
+.modalesMargenes{
+    display: block;
+    padding-right: 0px;
+}
+
+/*fin ventana modales*/

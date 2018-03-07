@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="../WEB-INF/resources/template/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    
+
+    <ui:define name="admin-ini">
+        <section class="dashboard-counts section-padding">
+            <div class="container-fluid">
+                <div class="row-admin-ini">
+                    <div class="col-xl-3 col-md-3 col-6">
+                        <div class=" wrapper count-title d-flex">
+                            <div class="name"><strong class="text-uppercase">Nuevos clientes</strong><span>Ultimo hace 2 dias</span>
+                                <div class="count-number"> <i class="fa fa-group"></i> 25</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3 col-6">
+                        <div class="wrapper count-title d-flex">
+                            <div class="name"><strong class="text-uppercase">Solicitudes de servicios </strong><span>Ultimo hace 1 dia</span>
+                                <div class="count-number"><i class="fa fa-address-book-o"></i> 400</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3 col-6">
+                        <div class="wrapper count-title d-flex">
+                           
+                            <div class="name"><strong class="text-uppercase">Nuevos beneficiarios</strong><span>Ultimo hace 2 dias</span>
+                                <div class="count-number"><i class="fa fa-handshake-o"></i> 342</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3 col-6">
+                        <div class="wrapper count-title d-flex">
+               
+                            <div class="name"><strong class="text-uppercase">Facturas Generadas</strong><span>Ultima hace 1 dia</span>
+                                <div class="count-number"><i class="fa fa-money"></i> 123</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Header Section-->
+        <section class="dashboard-header section-padding">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-md-stretch">
+                    <!-- Pendientes-->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="wrapper to-do">
+                            <header>
+                                <h2 class="display h4">Lista de pendientes</h2>
+                                <p>Aqui encontrara sus tareas pendientes</p>
+                            </header>
+                            <ul class="check-lists list-unstyled">
+                                <li class="d-flex align-items-center">
+                                    <input type="checkbox" id="list-1" name="list-1" class="form-control-custom"/>
+                                    <label for="list-1">Crear nuevo servicio</label>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <input type="checkbox" id="list-2" name="list-2" class="form-control-custom"/>
+                                    <label for="list-2">Crear nuevo usuario</label>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <input type="checkbox" id="list-3" name="list-3" class="form-control-custom"/>
+                                    <label for="list-3">Asignar permisos a usuario</label>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <input type="checkbox" id="list-4" name="list-4" class="form-control-custom"/>
+                                    <label for="list-4">Exportar informacion de ventas</label>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <input type="checkbox" id="list-5" name="list-5" class="form-control-custom"/>
+                                    <label for="list-5">Generar informe diario</label>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <input type="checkbox" id="list-6" name="list-6" class="form-control-custom"/>
+                                    <label for="list-6">Validacion transacciones   </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Pie Chart-->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="wrapper project-progress">
+                            <h2 class="display h4">Progreso Pendientes</h2>
+                            <div class="pie-chart">
+                                <canvas id="pieChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Line Chart -->
+                    <div class="col-lg-6 col-md-12 flex-lg-last flex-md-first align-self-baseline">
+                        <div class="wrapper sales-report">
+                            <h2 class="display h4">Transacciones acumuladas</h2>
+                            <div class="line-chart">
+                                <canvas id="lineCahrt"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Statistics Section-->
+        <section class="statistics section-padding section-no-padding-bottom">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-lg-4">
+                        <!-- Income-->
+                        <div class="wrapper income text-center">
+                            <div class="icon"><i class="fa fa-line-chart"></i></div>
+                            <div class="number">418</div><strong class="text-primary">Nuevas afiliaciones</strong>
+                            <p>Estas son las afiliaciones de nuevos usuarios durante el ultimo mes</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <!-- Monthly Usage-->
+                        <div class="wrapper data-usage">
+                            <h2 class="display h4">Uso del sistema</h2>
+                            <div class="row d-flex align-items-center">
+                                <div class="col-sm-6">
+                                    <div id="progress-circle" class="d-flex align-items-center justify-content-center"></div>
+                                </div>
+                                <div class="col-sm-6"><strong class="text-primary">80.56 Gb</strong><small>Capacidad actual</small><span>200 Gb </span></div>
+                            </div>
+                            <p>Tenga en cuenta que no puede exceder el 90% de la capacidad</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <!-- User Actibity-->
+                        <div class="wrapper user-activity">
+                            <h2 class="display h4">Uso Actual</h2>
+                            <div class="number">110</div>
+                            <h3 class="h4 display">Usuarios</h3>
+                            <div class="progress">
+                                <div role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar bg-primary"></div>
+                            </div>
+                            <div class="page-statistics d-flex justify-content-between">
+                                <div class="page-visites"><span><p>Visitas</p></span><strong>230</strong></div>
+                                <div class="new-visites"><span>Nuevas Visitas</span><strong>73.4%</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </ui:define>
+  
+
+</ui:composition>
+
+
+
