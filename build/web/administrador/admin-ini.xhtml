@@ -3,18 +3,21 @@
 <ui:composition template="../WEB-INF/resources/template/template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
 
     
 
     <ui:define name="admin-ini">
+        <f:view>
         <section class="dashboard-counts section-padding">
             <div class="container-fluid">
                 <div class="row-admin-ini">
                     <div class="col-xl-3 col-md-3 col-6">
                         <div class=" wrapper count-title d-flex">
                             <div class="name"><strong class="text-uppercase">Nuevos clientes</strong><span>Ultimo hace 2 dias</span>
-                                <div class="count-number"> <i class="fa fa-group"></i> 25</div>
+                                <div class="count-number"> <i class="fa fa-group"></i><h:outputText value="#{usuarioController.contarUsu()}"/></div>
                             </div>
                         </div>
                     </div>
@@ -29,7 +32,7 @@
                         <div class="wrapper count-title d-flex">
                            
                             <div class="name"><strong class="text-uppercase">Nuevos beneficiarios</strong><span>Ultimo hace 2 dias</span>
-                                <div class="count-number"><i class="fa fa-handshake-o"></i> 342</div>
+                                <div class="count-number"><i class="fa fa-handshake-o"></i> <h:outputText value="#{beneficiarioController.contarBen()}"/></div>
                             </div>
                         </div>
                     </div>
@@ -147,7 +150,7 @@
                 </div>
             </div>
         </section>
-
+        </f:view>
     </ui:define>
   
 

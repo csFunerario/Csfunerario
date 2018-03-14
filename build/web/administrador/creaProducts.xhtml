@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="../WEB-INF/resources/template/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui"> 
+                
+                
+        <ui:define name="admin-usuarios">
+
+       
+        <f:view>
+
+
+            <h:form>
+                <h2><h:outputText value="Crear Productos o Servicios"/></h2>
+                <h:panelGrid columns="4">
+                    <h:outputLabel value="Nombre:" for="nombre" />
+                    <h:inputText id="nombre" value="#{productoServicioControlador.productoServicio.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
+                    <h:outputLabel value="Precio:" for="precio" />
+                        <h:inputText id="precio" value="#{productoServicioControlador.productoServicio.precio}" title="Precio" required="true" requiredMessage="The Precio field is required."/>
+                    <h:outputLabel value="Caracteristicas:" for="caracteristicas" />
+                    <h:inputTextarea id="caracteristicas" value="#{productoServicioControlador.productoServicio.caracteristicas}" title="Caracteristicas" required="true" requiredMessage="The Caracteristicas field is required."/>
+                    <h:outputLabel value="Descripcion:" for="descripcion" />
+                    <h:inputTextarea id="descripcion" value="#{productoServicioControlador.productoServicio.descripcion}" title="Descripcion" required="true" requiredMessage="The Descripcion field is required."/>
+                    <h:outputLabel value="Tipo Servicio:" for="TipoServicio" />
+                    <h:selectOneMenu id="idTipoServicio" value="#{productoServicioControlador.tipoServicio.idTipoServicio}" title="IdTipoServicio" required="true" requiredMessage="The IdTipoServicio field is required.">
+                        <f:selectItems value="#{productoServicioControlador.listTProd()}" var="tp" itemLabel="#{tp.nombre}" itemValue="#{tp.idTipoServicio}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandButton action="#{productoServicioControlador.crearProducto()}" value="Guardar"/>
+            </h:form>
+        </f:view>
+
+    </ui:define>
+
+
+</ui:composition>
+
+
+

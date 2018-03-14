@@ -341,7 +341,7 @@ nav.navbar a.menu-btn:hover {
   nav.navbar .notification {
     flex-direction: column;
   }
-}
+
 
 @media (min-width: 992px) {
 

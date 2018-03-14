@@ -19,6 +19,7 @@ import sena.edu.Csfunerario.Facade.CiudadFacade;
  */
 @Named(value = "ciudadController")
 @SessionScoped
+
 public class CiudadController implements Serializable {
 
     /**

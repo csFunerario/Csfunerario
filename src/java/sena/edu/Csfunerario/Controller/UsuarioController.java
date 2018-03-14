@@ -6,18 +6,18 @@
 package sena.edu.Csfunerario.Controller;
 
 import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.persistence.Query;
-import sena.edu.Csfunerario.Entity.Beneficiario;
+
 import sena.edu.Csfunerario.Entity.Ciudad;
 import sena.edu.Csfunerario.Entity.TipoDocumento;
 import sena.edu.Csfunerario.Entity.Usuario;
-import sena.edu.Csfunerario.Facade.BeneficiarioFacade;
+
 import sena.edu.Csfunerario.Facade.CiudadFacade;
 import sena.edu.Csfunerario.Facade.TipoDocumentoFacade;
 import sena.edu.Csfunerario.Facade.UsuarioFacade;
@@ -34,13 +34,12 @@ public class UsuarioController implements Serializable {
      * Creates a new instance of UsuarioController
      */
     public UsuarioController() {
-        usuario = new Usuario();
+       usuario = new Usuario();
         ciudad = new Ciudad();
         tipoDocumento = new TipoDocumento();
         usuarioSesion = new Usuario();
-
     }
-
+   
     @EJB
     UsuarioFacade usuarioFacade;
 
@@ -56,39 +55,9 @@ public class UsuarioController implements Serializable {
     private TipoDocumento tipoDocumento;
     private Usuario usuarioSesion;
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
+   
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public Ciudad getCiudad() {
-        return ciudad;
-    }
-
-    public void setCiudad(Ciudad ciudad) {
-        this.ciudad = ciudad;
-    }
-
-    public TipoDocumento getTipoDocumento() {
-        return tipoDocumento;
-    }
-
-    public void setTipoDocumento(TipoDocumento tipoDocumento) {
-        this.tipoDocumento = tipoDocumento;
-    }
-
-    public Usuario getUsuarioSesion() {
-        return usuarioSesion;
-    }
-
-    public void setUsuarioSesion(Usuario usuarioSesion) {
-        this.usuarioSesion = usuarioSesion;
-    }
-
-    public String iniciarSesion() {
+     public String iniciarSesion() {
 
         usuarioSesion = new Usuario();
 
@@ -142,6 +111,10 @@ public class UsuarioController implements Serializable {
         usuarioFacade.remove(user);
         usuario = new Usuario();
     }
+    public int contarUsu() {
+       int cant= usuarioFacade.count();
+        return cant;
+    }
 
     public String editarUsuario() {
 
@@ -152,6 +125,38 @@ public class UsuarioController implements Serializable {
         usuarioSesion.setIdTipoDocumento(listDoc.get(0));
         this.usuarioFacade.edit(this.usuarioSesion);
         return "Ver_Mis_Datos?faces-redirect=true";
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Ciudad getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(Ciudad ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public Usuario getUsuarioSesion() {
+        return usuarioSesion;
+    }
+
+    public void setUsuarioSesion(Usuario usuarioSesion) {
+        this.usuarioSesion = usuarioSesion;
+    }
+
+    public TipoDocumento getTipoDocumento() {
+        return tipoDocumento;
+    }
+
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
     }
 
 }

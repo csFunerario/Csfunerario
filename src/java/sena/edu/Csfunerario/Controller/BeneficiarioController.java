@@ -6,13 +6,12 @@
 package sena.edu.Csfunerario.Controller;
 
 import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
-import javax.faces.context.FacesContext;
+
 import javax.persistence.Query;
-import javax.servlet.http.HttpSession;
+import javax.enterprise.context.SessionScoped;
 import sena.edu.Csfunerario.Entity.Beneficiario;
 import sena.edu.Csfunerario.Entity.Ciudad;
 import sena.edu.Csfunerario.Entity.TipoDocumento;
@@ -61,45 +60,7 @@ public class BeneficiarioController implements Serializable {
     private UsuarioController usuarioController;
     private Usuario usuSesion;
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public Beneficiario getBeneficiario() {
-        return beneficiario;
-    }
-
-    public void setBeneficiario(Beneficiario beneficiario) {
-        this.beneficiario = beneficiario;
-    }
-
-    public Ciudad getCiudad() {
-        return ciudad;
-    }
-
-    public void setCiudad(Ciudad ciudad) {
-        this.ciudad = ciudad;
-    }
-
-    public TipoDocumento getTipoDocumento() {
-        return tipoDocumento;
-    }
-
-    public void setTipoDocumento(TipoDocumento tipoDocumento) {
-        this.tipoDocumento = tipoDocumento;
-    }
-
-    public UsuarioController getUsuarioController() {
-        return usuarioController;
-    }
-
-    public void setUsuarioController(UsuarioController usuarioController) {
-        this.usuarioController = usuarioController;
-    }
+    
 
     public List<Beneficiario> listarBeneficiario() {
         usuario = usuarioController.mostrarSesion();
@@ -133,7 +94,10 @@ public class BeneficiarioController implements Serializable {
         beneficiario = new Beneficiario();    
         return "Usu_Beneficiarios?faces-redirect=true";
     }  
-    
+    public int contarBen() {
+       int cant= beneficiarioFacade.count();
+        return cant;
+    }
          
     public String eliminarPersona(Beneficiario benefElim){ 
         beneficiario = benefElim;      
@@ -141,6 +105,54 @@ public class BeneficiarioController implements Serializable {
         beneficiarioFacade.remove(beneficiario);
         beneficiario = new Beneficiario();
       return "Usu_Beneficiarios?faces-redirect=true";
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Beneficiario getBeneficiario() {
+        return beneficiario;
+    }
+
+    public void setBeneficiario(Beneficiario beneficiario) {
+        this.beneficiario = beneficiario;
+    }
+
+    public Ciudad getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(Ciudad ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public UsuarioController getUsuarioController() {
+        return usuarioController;
+    }
+
+    public void setUsuarioController(UsuarioController usuarioController) {
+        this.usuarioController = usuarioController;
+    }
+
+    public Usuario getUsuSesion() {
+        return usuSesion;
+    }
+
+    public void setUsuSesion(Usuario usuSesion) {
+        this.usuSesion = usuSesion;
+    }
+
+    public TipoDocumento getTipoDocumento() {
+        return tipoDocumento;
+    }
+
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
     }
      
 }
