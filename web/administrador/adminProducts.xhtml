@@ -19,16 +19,19 @@
                 <h2><h:outputText value="Productos y Servicios "/> 
                     <h:commandLink>
                         <h:graphicImage url="../resources/Imgs/xls.jpg" width="23"/>
-                            <p:dataExporter type="xls" target="tdproductos" fileName="Productos Y servicios"/>
+                        <p:dataExporter type="xls" target="tdproductos" fileName="Productos Y servicios"/>
                     </h:commandLink>
-                        </h2>
-                <p:dataTable id="tdproductos" value="#{productoServicioControlador.listProd()}" var="item" rows="10"
+                </h2>
+                <p:dataTable id="tdproductos" value="#{productoServicioControlador.listProd()}" var="item" 
+                             rows="10"
                              paginator="true"
-                             filteredValue="#{item}"
-                             paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                              rowsPerPageTemplate="5,10,15" 
-                             style="margin-bottom:20px">
-                        <p:column  headerText="Nombre" filterBy="#{item.nombre}"  filterMatchMode="contains">
+                             selectionMode="single" 
+                             selection="#{productoServicioControlador.productoServicio}"
+                             filteredValue="#{item}"
+                             rowKey="#{item.idProductoServicio}">
+                    <p:column  headerText="Nombre" filterBy="#{item.nombre}"  filterMatchMode="contains">
                         <f:facet name="header">
                             <h:outputText value="Nombre"/>
                         </f:facet>
@@ -47,23 +50,23 @@
                         <h:outputText value="#{item.caracteristicas}"/>
                     </p:column>
 
-                    <p:column  headerText="Tipo Serivcio" filterBy="#{item.idTipoServicio.nombre}" filterMatchMode="contains" >
+                    <p:column  headerText="TipoServicio" filterBy="#{item.idTipoServicio.nombre}" filterMatchMode="contains">
                         <f:facet name="header"> 
                             <h:outputText value="Tipo Servicio"/>
                         </f:facet>
                         <h:outputText value="#{item.idTipoServicio.nombre}"/>
                     </p:column>
-                    <p:column headerText="Accion">
-                        <f:facet name="header">
-                            <h:outputText value="accion"/>
-                        </f:facet>
-                        <p:commandButton action="#{productoServicioControlador.editarProducto(item)}" value="Editar" />
-                        <p:commandButton action="creaProducts?faces-redirect=true" value="Crear"/>
-                    </p:column>
+                    <f:facet name="footer">
+                        <p:commandButton disabled="#{empty productoServicioControlador.productoServicio}" update=":ProdEditForm" oncomplete="PF('ProdEditDialog').show()" icon="ui-icon-pencil" />
+                        <p:commandButton action="creaProducts?faces-redirect=true" icon="ui-icon-plus"/>
+                        <p:commandButton disabled="#{empty productoServicioControlador.productoServicio}" actionListener="#{productoServicioControlador.eliminarProducto()}" update=":ProdEditForm" icon="ui-icon-trash" />
+                </f:facet>
+
                 </p:dataTable>
+                
             </h:form>
         </f:view>
-
+        <ui:include src="editarProducts.xhtml"/>
 
     </ui:define>
 
