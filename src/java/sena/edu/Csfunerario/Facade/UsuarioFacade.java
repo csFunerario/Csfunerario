@@ -15,7 +15,7 @@ import static sena.edu.Csfunerario.Entity.Usuario_.numeroIdentificacion;
 public class UsuarioFacade extends AbstractFacade<Usuario> {
 
     @PersistenceContext(unitName = "CsfunerarioPU")
-    private EntityManager em;
+    public EntityManager em;
 
     @Override
     protected EntityManager getEntityManager() {

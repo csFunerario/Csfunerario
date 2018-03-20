@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="../WEB-INF/resources/template/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+
+
+    <ui:define name="admin-usuarios">
+        <f:view>
+            <h:form>
+                <p:growl id="msgs" showDetail="true"/>
+                <p:dataTable  id="tdRolUsu" value="#{usuarioRolController.listUsuRol()}" 
+                             var="item" rows="5"
+                             paginator="true"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                             rowsPerPageTemplate="5,10,15"
+                             editable="true"
+                             selectionMode="single" 
+                             selection="#{usuarioRolController.usuarioRol}"
+                             rowKey="#{item.idUsuario}">
+
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Usuario"/>
+                        </f:facet>
+                        <h:outputText value="#{item.idUsuario.nombre} #{item.idUsuario.apellido}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Rol"/>
+                        </f:facet>
+                        <h:outputText value="#{item.idRol.nombre}"/>
+                    </p:column>
+                    <f:facet name="footer">
+                        <p:commandButton disabled="#{empty usuarioRolController.usuarioRol}"  update=":UsurolForm" oncomplete="PF('UsuRolDialog').show()" icon="ui-icon-plus" />
+                    </f:facet>
+
+                </p:dataTable>
+            </h:form>
+        </f:view>
+        <ui:include src="adminusuRol.xhtml"/>
+
+    </ui:define>
+
+
+</ui:composition>
+
+
+

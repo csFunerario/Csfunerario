@@ -15,12 +15,16 @@ import javax.faces.context.FacesContext;
 import javax.persistence.Query;
 
 import sena.edu.Csfunerario.Entity.Ciudad;
+import sena.edu.Csfunerario.Entity.Rol;
 import sena.edu.Csfunerario.Entity.TipoDocumento;
 import sena.edu.Csfunerario.Entity.Usuario;
+import sena.edu.Csfunerario.Entity.UsuarioRol;
 
 import sena.edu.Csfunerario.Facade.CiudadFacade;
+import sena.edu.Csfunerario.Facade.RolFacade;
 import sena.edu.Csfunerario.Facade.TipoDocumentoFacade;
 import sena.edu.Csfunerario.Facade.UsuarioFacade;
+import sena.edu.Csfunerario.Facade.UsuarioRolFacade;
 
 /**
  *
@@ -48,12 +52,20 @@ public class UsuarioController implements Serializable {
 
     @EJB
     TipoDocumentoFacade tipoDocumentoFacade;
+    
+    @EJB
+    RolFacade rolFacade;
+    
+    @EJB
+    UsuarioRolFacade usuarioRolFacade;
 
 
     private Usuario usuario;
     private Ciudad ciudad;
     private TipoDocumento tipoDocumento;
     private Usuario usuarioSesion;
+    private Rol rol;
+    private UsuarioRol usuarioRol;
 
    
 
@@ -69,7 +81,7 @@ public class UsuarioController implements Serializable {
             } else {
                 FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Aviso", "Usuario y/o clave incorrecto"));
             }
-            return "/usuario/Principal_Usuario?faces-redirect=true";
+            return "/inicioRol?faces-redirect=true";
         } catch (Exception e) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error", e.getMessage()));
             return "index?faces-redirect=true";
@@ -157,6 +169,22 @@ public class UsuarioController implements Serializable {
 
     public void setTipoDocumento(TipoDocumento tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
+    }
+
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
+
+    public UsuarioRol getUsuarioRol() {
+        return usuarioRol;
+    }
+
+    public void setUsuarioRol(UsuarioRol usuarioRol) {
+        this.usuarioRol = usuarioRol;
     }
 
 }

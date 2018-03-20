@@ -54,7 +54,7 @@ public class ProductoServicio implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "precio")
-    private float precio;
+    private Integer precio;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 900)
@@ -80,7 +80,7 @@ public class ProductoServicio implements Serializable {
         this.idProductoServicio = idProductoServicio;
     }
 
-    public ProductoServicio(Integer idProductoServicio, String nombre, float precio, String caracteristicas, String descripcion) {
+    public ProductoServicio(Integer idProductoServicio, String nombre, Integer precio, String caracteristicas, String descripcion) {
         this.idProductoServicio = idProductoServicio;
         this.nombre = nombre;
         this.precio = precio;
@@ -104,11 +104,11 @@ public class ProductoServicio implements Serializable {
         this.nombre = nombre;
     }
 
-    public float getPrecio() {
+    public Integer getPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(Integer precio) {
         this.precio = precio;
     }
 

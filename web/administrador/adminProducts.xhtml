@@ -23,11 +23,10 @@
                     </h:commandLink>
                 </h2>
                 <p:dataTable id="tdproductos" value="#{productoServicioControlador.listProd()}" var="item" 
-                             rows="10"
+                             rows="3"
                              paginator="true"
                              paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
-                             rowsPerPageTemplate="5,10,15" 
-                             selectionMode="single" 
+                              selectionMode="single" 
                              selection="#{productoServicioControlador.productoServicio}"
                              filteredValue="#{item}"
                              rowKey="#{item.idProductoServicio}">
@@ -59,7 +58,7 @@
                     <f:facet name="footer">
                         <p:commandButton disabled="#{empty productoServicioControlador.productoServicio}" update=":ProdEditForm" oncomplete="PF('ProdEditDialog').show()" icon="ui-icon-pencil" />
                         <p:commandButton action="creaProducts?faces-redirect=true" icon="ui-icon-plus"/>
-                        <p:commandButton disabled="#{empty productoServicioControlador.productoServicio}" actionListener="#{productoServicioControlador.eliminarProducto()}" update=":ProdEditForm" icon="ui-icon-trash" />
+                        <p:commandButton disabled="#{empty productoServicioControlador.productoServicio}" actionListener="#{productoServicioControlador.eliminarProducto()}" update="tdproductos" icon="ui-icon-trash" />
                 </f:facet>
 
                 </p:dataTable>

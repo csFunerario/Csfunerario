@@ -64,12 +64,21 @@ public class productoServicioControlador implements Serializable{
     }
     public String editarProducto(ProductoServicio productoServ){
         productoServicio = productoServ;
+        System.out.println(productoServicio);
         return "editarProducts?faces-redirect=true";
+        
     }
     public String editProducto(){
-        productoServicio.setIdTipoServicio(tipoServicio);
+         productoServicio.setIdTipoServicio(tipoServicio);
         productoServicioFacade.edit(productoServicio);
         return "adminProducts?faces-redirect=true";
+    }
+    
+    public void eliminarProducto(){
+        
+        productoServicioFacade.remove(productoServicio);
+        
+        
     }
 
     public TipoServicio getTipoServicio() {
