@@ -40,7 +40,7 @@
                 <div class="collapse navbar-collapse">
                   <form action="" class="navbar-form navbar-right" role="search">
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Buscar"/>
+                        <input type="text" class="form-control" placeholder="#{esp.Buscar_}"/>
                       <span class="input-group-btn">
                         <button class="btn btn-default buscar" type="button">
                             <span class="">
@@ -48,10 +48,11 @@
                             </span>
                         </button>
                       </span>
+                      
                     </div>
                   </form>
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#InicioSesion" data-toggle="modal" type="submit" class="btn btn-default-inicio">Ingresar</a></li>
+                      <li><a href="#InicioSesion" data-toggle="modal" type="submit" class="btn btn-default-inicio"><h:outputText value="#{esp.Ingresar}"/></a></li>
                   </ul>
                 </div>
               </div>
@@ -108,12 +109,12 @@
 
                             <a href="#carousel-1" class="left carousel-control" role="button" data-slide="prev">
                               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                              <span class="sr-only">Anterior</span>
+                              <span class="sr-only">#{esp.Anterior}</span>
                             </a>
 
                             <a href="#carousel-1" class="right carousel-control" role="button" data-slide="next">
                               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                              <span class="sr-only">Siguiente</span>
+                              <span class="sr-only">#{esp.Siguiente}</span>
                             </a>
 
                             <!-- fin iconos de movimiento de slide -->
@@ -128,11 +129,19 @@
                   <div class="container contenido">
 
                     <div class="row lin1">
+                        <h:form>
+                            
+                        <span>
+                            <h:selectOneMenu value="#{idiomasControlador.localidad}" onchange="submit()" valueChangeListener="#{idiomasControlador.cambiarIdioma}">
+                              <f:selectItems value="#{idiomasControlador.listIdi}"/>
+                          </h:selectOneMenu>
+                      </span>
+                      </h:form>
 
                             <div class="panel panel-default obituarios col-md-8 ">
 
                                   <div class="panel-heading">
-                                    <h3>Obituarios</h3>
+                                    <h3>#{esp.Tributos}</h3>
                                     <div class="panel-group" id="accordion" role="tablist"></div>
                                   </div>
                                   <div class="panel-body-obituarios-datos">
@@ -150,8 +159,8 @@
                                                 <div class="panel-body">
                                                   <div class="obituarios-datos col-md-3">
                                                     <h5>Maria Belen Ruiz Perez</h5>
-                                                    <h5>Descansó en la paz del Señor</h5>
-                                                    <h5>Junio 15 de 2017</h5>
+                                                    <h5>#{esp.Descance_Paz}</h5>
+                                                    <h5>#{esp.Enero} 15 de 2017</h5>
                                                     <h5>Cucuta</h5>
                                                   </div>
                                                   <div class="obituarios-datos col-md-3">
@@ -159,15 +168,15 @@
                                                     <h5>SAN PEDRO APOSTOL</h5>
                                                   </div>
                                                   <div class="obituarios-datos col-md-2">
-                                                    <h5>Hora:</h5>
+                                                    <h5>#{esp.Hora}:</h5>
                                                     <h5>3:00 pm</h5>
                                                   </div>
                                                   <div class="obituarios-datos col-md-2">
-                                                    <h5>Destino final:</h5>
+                                                    <h5>#{esp.Destino}:</h5>
                                                     <h5>MUNICIPAL VILLA ROSARIO</h5>
                                                     </div>
                                                   <div class="obituarios-datos col-md-2">
-                                                    <h5>Hora:</h5>
+                                                    <h5>#{esp.Hora}:</h5>
                                                     <h5>4:00 pm</h5>
                                                   </div>
                                                 </div>
@@ -189,8 +198,8 @@
                                                 <div class="panel-body">
                                                 <div class="obituarios-datos col-md-3">
                                                   <h5>  ROBERTO AREVALO PEREIRA</h5>
-                                                  <h5>  Descansó en la paz del Señor</h5>
-                                                  <h5>  Junio 15 de 2017</h5>
+                                                  <h5>  #{esp.Descance_Paz}</h5>
+                                                  <h5>  #{esp.Junio} 15 de 2017</h5>
                                                   <h5>  Bucaramanga</h5>
                                                 </div>
                                                 <div class="obituarios-datos col-md-3">
@@ -198,18 +207,14 @@
                                                   <h5>  PARROQUIA DE VADO REAL</h5>
                                                 </div>
                                                 <div class="obituarios-datos col-md-2">
-                                                  <h5>  Hora:</h5>
+                                                  <h5>  #{esp.Hora}:</h5>
                                                   <h5>  10:00 am</h5>
                                                 </div>
                                                 <div class="obituarios-datos col-md-2">
-                                                  <h5>  Destino final:</h5>
+                                                  <h5>  #{esp.Destino}:</h5>
                                                   <h5>  CEMENTERIO LOCAL DE VADO REAL</h5>
                                                 </div>
-                                                <div class="obituarios-datos col-md-2">
-                                                  <h5>  Hora:</h5>
-                                                  <h5>  11:00 am</h5>
-                                                  <h5>  enviar flores</h5>
-                                                </div>
+
                                                 </div>
                                               </div>
                                             </div>
@@ -229,8 +234,8 @@
                                                 <div class="panel-body">
                                                   <div class="obituarios-datos col-md-3">
                                                     <h5>Laura Jineth Quintana Lopez</h5>
-                                                    <h5>Descansó en la paz del Señor</h5>
-                                                    <h5>Junio 15 de 2017</h5>
+                                                    <h5>#{esp.Descance_Paz}</h5>
+                                                    <h5>#{esp.Agosto} 15 de 2017</h5>
                                                     <h5>Bucaramanga</h5>
                                                   </div>
                                                   <div class="obituarios-datos col-md-3">
@@ -238,15 +243,15 @@
                                                     <h5>PARROQUIA NUESTRA SEÑORA DEL PERPETUO SOCORRO</h5>
                                                   </div>
                                                   <div class="obituarios-datos col-md-2">
-                                                    <h5>Hora:</h5>
+                                                    <h5>#{esp.Hora}:</h5>
                                                     <h5>4:00 pm</h5>
                                                   </div>
                                                   <div class="obituarios-datos col-md-2">
-                                                    <h5>Destino final:</h5>
+                                                    <h5>#{esp.Destino}:</h5>
                                                     <h5>JARDINES LA COLINA. LOTE.</h5>
                                                   </div>
                                                   <div class="obituarios-datos col-md-2">
-                                                    <h5>Hora:</h5>
+                                                    <h5>#{esp.Destino}:</h5>
                                                     <h5>4:50 pm</h5>
                                                   </div>
 
@@ -261,10 +266,10 @@
 
                             <div class="panel panel-default obituarios col-md-3">
                               <div class="panel-heading">
-                                <h2>Red de apoyo para el duelo</h2>
+                                <h2>#{esp.Red_Apoyo}</h2>
                               </div>
                               <div class="panel-body">
-                                <a href="#"><h3 class="color-red"> Visita Nuestro blog para conocer mas</h3></a>
+                                <a href="#"><h3 class="color-red"> Blog</h3></a>
                               </div>
                             </div>
                     </div>
@@ -274,23 +279,23 @@
                     <div class="noticias col-md-8">
 
                       <div class="col-md-6">
-                        <h2>Noticias</h2>
-                        <h3>Apertura Nueva Sede</h3>
+                        <h2>#{esp.Noticias}</h2>
+                        <h3>#{esp.Nueva_Sede}</h3>
                         <img src="resources/Imgs/Sede.jpg" class="img-responsive-velacion img-thumbnail" alt="Velacion"/>
-                        <a href="#"><h4>Conocela aquí</h4></a>
+                        <a href="#"><h4>#{esp.Visit}</h4></a>
                       </div>
                       <div class="col-md-6">
-                        <h2>Servicios</h2>
-                        <h3>Solicite su cotizacion</h3>
+                        <h2>#{esp.Servicios}</h2>
+                        <h3>#{esp.Solicit_cot}</h3>
                         <img src="resources/Imgs/Cotizacion.jpg" alt="cotizacion" class="Img-cotizacion img-thumbnail"/>
-                        <a href="#"><h4>Ingresa aqui y conoce más</h4></a>
+                        <a href="#"><h4>#{esp.Visit}</h4></a>
                       </div>
 
                     </div>
 
                     <div class="ser_cli col-md-4  lin2 ">
-                      <h2>Servicio al Cliente</h2>
-                      <h3>Escribenos</h3>
+                      <h2>#{esp.Serv_cl}</h2>
+                      <h3>#{esp.Escribenos}</h3>
                         <img src="resources/Imgs/Atencion.jpg" class="img-responsive-velacion -atencion img-thumbnail" alt="Atencion al cliente"/>
                         <div >
                           <div class="col-md-4">
@@ -298,7 +303,7 @@
                             <h4>748 4000</h4>
                           </div>
                           <div class="col-md-6">
-                            <h4>Linea Nacional</h4>
+                            <h4>#{esp.Linea_nal}</h4>
                             <h4>01 8000 910 571</h4>
                           </div>
                         </div>
@@ -329,25 +334,25 @@
                         </div>
 
                         <div class="form-group">
-                            <p:outputLabel value="Usuario:" for="numeroIdentificacion" />
+                            <p:outputLabel value="#{esp.Usuario}:" for="numeroIdentificacion" />
                             <p:inputText id="numeroIdentificacion" value="#{usuarioController.usuario.numeroIdentificacion}"  title="numeroIdentificacion" required="true" requiredMessage="Numero de documento requerido" class="form-control-login" />
                         </div>
 
                         <div class="form-group-inicio-sesion">
-                            <p:outputLabel value="Clave:" for="clave" />
+                            <p:outputLabel value="#{esp.Clave}:" for="clave" />
                             <p:inputText id="clave" value="#{usuarioController.usuario.clave}"  title="Clave" required="true" requiredMessage="Contraseña obligatoria" type="password" class="form-control-login"/>
                         </div>
 
                         <div class="form-group form-inline ingresar-inicio-sesion">
-                            <h:commandButton class="btn-ingresar btn-primary" id="btnIngresar" value="Ingresar" action="#{usuarioController.iniciarSesion()}"></h:commandButton>
+                            <h:commandButton class="btn-ingresar btn-primary" id="btnIngresar" value="#{esp.Ingresar}" action="#{usuarioController.iniciarSesion()}"></h:commandButton>
 
                             <div class="checkbox ">
                                 <label>
-                                    <input type="checkbox" name="" value=""/> Recordar
+                                    <input type="checkbox" name="" value=""/> #{esp.Recordar}
                                 </label>
                             </div>
                             <div class="form-group form-inline">
-                                <a href="#"><h5>Olvide mi contraseña</h5></a>
+                                <a href="#"><h5>#{esp.Restar_pass}</h5></a>
                             </div>
                         </div>
                     </div>
@@ -380,22 +385,22 @@
 
                 </div>
                 <div class="col-md-3  ">
-                    <h4>Contactenos</h4>
-                    <h5>Liena Nacional</h5>
+                    <h4>#{esp.Contactenos}</h4>
+                    <h5>#{esp.Linea_nal}</h5>
                     <h5>01 8000 910 571</h5>
-                    <h5>Ver todas las Sedes</h5>
+                    <h5>#{esp.ver_sedes}</h5>
 
                 </div>
                 <div class="col-md-3">
-                    <h4>Sede Principal</h4>
+                    <h4>#{esp.Sede}</h4>
                     <h5>Cra 7 71 26 Piso 10</h5>
-                    <h5>Telefono: 8496326 - 7552369</h5>
+                    <h5>#{esp.Telefono}: 8496326 - 7552369</h5>
                     <h5>Bogotá - Colombia</h5>
 
                 </div>
                 <div class="col-md-3 ">
-                    <h4>Conoce nuestra politica de Seguridad de Datos</h4>
-                    <h4 class="glyphicon glyphicon-copyright-mark"> Todos los derechos reservados </h4>
+                    <h4>#{esp.Pol_Dat}</h4>
+                    <h4 class="glyphicon glyphicon-copyright-mark">#{esp.Der_Res} </h4>
 
                 </div>
               </div>

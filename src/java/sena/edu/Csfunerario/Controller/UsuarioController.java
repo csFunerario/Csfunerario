@@ -186,5 +186,8 @@ public class UsuarioController implements Serializable {
     public void setUsuarioRol(UsuarioRol usuarioRol) {
         this.usuarioRol = usuarioRol;
     }
+    public List<UsuarioRol> lRol(){
+     return usuarioRolFacade.mostrarRol(mostrarSesion());
+    }
 
 }

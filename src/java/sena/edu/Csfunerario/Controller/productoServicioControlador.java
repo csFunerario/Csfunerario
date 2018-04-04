@@ -15,6 +15,8 @@ import sena.edu.Csfunerario.Entity.ProductoServicio;
 import sena.edu.Csfunerario.Entity.TipoServicio;
 import sena.edu.Csfunerario.Facade.ProductoServicioFacade;
 import sena.edu.Csfunerario.Facade.TipoServicioFacade;
+import sena.edu.Csfunerario.Controller.TransaccionesController;
+import sena.edu.Csfunerario.Entity.Usuario;
 
 /**
  *
@@ -41,7 +43,7 @@ public class productoServicioControlador implements Serializable{
     private TipoServicio tipoServicio;
     private ProductoServicio productoServicio;
     private List<ProductoServicio> listfilP;
-   
+
 
    
 
@@ -69,13 +71,13 @@ public class productoServicioControlador implements Serializable{
         
     }
     public String editProducto(){
+        
          productoServicio.setIdTipoServicio(tipoServicio);
         productoServicioFacade.edit(productoServicio);
         return "adminProducts?faces-redirect=true";
     }
     
     public void eliminarProducto(){
-        
         productoServicioFacade.remove(productoServicio);
         
         

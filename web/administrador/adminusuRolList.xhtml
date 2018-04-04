@@ -35,9 +35,6 @@
                         </f:facet>
                         <h:outputText value="#{item.idRol.nombre}"/>
                     </p:column>
-                    <f:facet name="footer">
-                        <p:commandButton disabled="#{empty usuarioRolController.usuarioRol}"  update=":UsurolForm" oncomplete="PF('UsuRolDialog').show()" icon="ui-icon-plus" />
-                    </f:facet>
 
                 </p:dataTable>
             </h:form>

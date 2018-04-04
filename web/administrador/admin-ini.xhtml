@@ -16,14 +16,14 @@
                 <div class="row-admin-ini">
                     <div class="col-xl-3 col-md-3 col-6">
                         <div class=" wrapper count-title d-flex">
-                            <div class="name"><strong class="text-uppercase">Nuevos clientes</strong><span>Ultimo hace 2 dias</span>
+                            <div class="name"><strong class="text-uppercase">#{esp.N_Clientes}</strong><span>#{esp.Ultimo_hace} 2 #{esp.Dias}</span>
                                 <div class="count-number"> <i class="fa fa-group"></i><h:outputText value="#{usuarioController.contarUsu()}"/></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-3 col-6">
                         <div class="wrapper count-title d-flex">
-                            <div class="name"><strong class="text-uppercase">Solicitudes de servicios </strong><span>Ultimo hace 1 dia</span>
+                            <div class="name"><strong class="text-uppercase">#{esp.S_Servicio} </strong><span>#{esp.Ultimo_hace} 1 #{esp.Dias}</span>
                                 <div class="count-number"><i class="fa fa-address-book-o"></i> 400</div>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                     <div class="col-xl-3 col-md-3 col-6">
                         <div class="wrapper count-title d-flex">
                            
-                            <div class="name"><strong class="text-uppercase">Nuevos beneficiarios</strong><span>Ultimo hace 2 dias</span>
+                            <div class="name"><strong class="text-uppercase">#{esp.N_Beneficiarios}</strong><span>#{esp.Ultimo_hace} 2 #{esp.Dias}</span>
                                 <div class="count-number"><i class="fa fa-handshake-o"></i> <h:outputText value="#{beneficiarioController.contarBen()}"/></div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                     <div class="col-xl-3 col-md-3 col-6">
                         <div class="wrapper count-title d-flex">
                
-                            <div class="name"><strong class="text-uppercase">Facturas Generadas</strong><span>Ultima hace 1 dia</span>
+                            <div class="name"><strong class="text-uppercase">#{esp.F_gen}</strong><span>#{esp.Ultimo_hace} 2 #{esp.Dias}</span>
                                 <div class="count-number"><i class="fa fa-money"></i> 123</div>
                             </div>
                         </div>
@@ -55,22 +55,22 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="wrapper to-do">
                             <header>
-                                <h2 class="display h4">Lista de pendientes</h2>
-                                <p>Aqui encontrara sus tareas pendientes</p>
+                                <h2 class="display h4">#{esp.L_Pendientes}</h2>
+                                <p>#{esp.T_PendientesC}</p>
                             </header>
                             <ul class="check-lists list-unstyled">
                                 <li class="d-flex align-items-center">
-                                    <a href="creaProducts.xhtml" class="form-control-custom align-items-stretch">Crear nuevo servicio</a>
+                                    <a href="creaProducts.xhtml" class="form-control-custom align-items-stretch">#{esp.C_N_Service}</a>
                                 </li>
                                 <li class="d-flex align-items-center">
-                                    <a href="adminProducts.xhtml" class="form-control-custom align-items-stretch">Ver Productos o servicio</a>
+                                    <a href="adminProducts.xhtml" class="form-control-custom align-items-stretch">#{esp.VPServicio}</a>
                                 </li>
                                 <li class="d-flex align-items-center">
-                                    <a href="admin-usuarios.xhtml" class="form-control-custom align-items-stretch">Usuarios</a>
+                                    <a href="admin-usuarios.xhtml" class="form-control-custom align-items-stretch">#{esp.Usuario}s</a>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <input type="checkbox" id="list-4" name="list-4" class="form-control-custom"/>
-                                    <label for="list-4">Exportar informacion de ventas</label>
+                                    <label for="list-4">#{esp.Exportar} #{esp.Informacion} #{esp.Usuario}s</label>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <input type="checkbox" id="list-5" name="list-5" class="form-control-custom"/>
