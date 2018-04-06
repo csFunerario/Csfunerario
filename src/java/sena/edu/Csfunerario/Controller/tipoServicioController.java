@@ -9,6 +9,7 @@ import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import javax.ejb.EJB;
+
 import sena.edu.Csfunerario.Entity.TipoServicio;
 import sena.edu.Csfunerario.Facade.TipoServicioFacade;
 
@@ -42,5 +43,7 @@ public class tipoServicioController implements Serializable {
     public void crearTipoServicio(){        
         tipoServicioFacade.create(tipoServicio);
     }
+    
+    
     
 }

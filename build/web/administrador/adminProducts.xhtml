@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="../WEB-INF/resources/template/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+
+
+    <ui:define name="admin-usuarios">
+        <f:view>
+
+
+            <h:form> 
+
+                <p:growl autoUpdate="true" showDetail="true"/>
+                <h2><h:outputText value="#{esp.Productos} #{esp.Y} #{esp.Servicios}"/> 
+                    <h:commandLink>
+                        <h:graphicImage url="../resources/Imgs/xls.jpg" width="23"/>
+                        <p:dataExporter type="xls" target="tdproductos" fileName="Productos Y servicios"/>
+                    </h:commandLink>
+                </h2>
+                <p:dataTable id="tdproductos" value="#{productoServicioControlador.listProd()}" var="item" 
+                             rows="3"
+                             paginator="true"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                              selectionMode="single" 
+                             selection="#{productoServicioControlador.productoServicio}"
+                             filteredValue="#{item}"
+                             rowKey="#{item.idProductoServicio}">
+                    <p:column  headerText="Nombre" filterBy="#{item.nombre}"  filterMatchMode="contains">
+                        <f:facet name="header">
+                            <h:outputText value="#{esp.nombre}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.nombre}"/>
+                    </p:column>
+                    <p:column headerText="precio">
+                        <f:facet name="header">
+                            <h:outputText value="#{esp.Costo}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.precio}" />
+                    </p:column>
+                    <p:column headerText="Caracteriticas">
+                        <f:facet  name="header">
+                            <h:outputText value="#{esp.Caracteristicas}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.caracteristicas}"/>
+                    </p:column>
+
+                    <p:column  headerText="TipoServicio" filterBy="#{item.idTipoServicio.nombre}" filterMatchMode="contains">
+                        <f:facet name="header"> 
+                            <h:outputText value="#{esp.Tipo} #{esp.Servicio}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.idTipoServicio.nombre}"/>
+                    </p:column>
+                    <f:facet name="footer">
+                        <p:commandButton disabled="#{empty productoServicioControlador.productoServicio}" update=":ProdEditForm" oncomplete="PF('ProdEditDialog').show()" icon="ui-icon-pencil" />
+                        <p:commandButton action="creaProducts?faces-redirect=true" icon="ui-icon-plus"/>
+                        <p:commandButton disabled="#{empty productoServicioControlador.productoServicio}" actionListener="#{productoServicioControlador.eliminarProducto()}" update="tdproductos" icon="ui-icon-trash" />
+                </f:facet>
+
+                </p:dataTable>
+                
+            </h:form>
+        </f:view>
+        <ui:include src="editarProducts.xhtml"/>
+
+    </ui:define>
+
+
+</ui:composition>
+
+
+

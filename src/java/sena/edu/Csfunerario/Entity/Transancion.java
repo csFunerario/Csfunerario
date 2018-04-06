@@ -153,4 +153,8 @@ public class Transancion implements Serializable {
         return "sena.edu.Csfunerario.Entity.Transancion[ idTransancion=" + idTransancion + " ]";
     }
 
+    public void getIdUsuario(Integer idUsuario) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

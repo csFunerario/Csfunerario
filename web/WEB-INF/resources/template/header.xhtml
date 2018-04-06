@@ -3,7 +3,8 @@
 <ui:fragment xmlns="http://www.w3.org/1999/xhtml"
              xmlns:h="http://xmlns.jcp.org/jsf/html"
              xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-             xmlns:p="http://primefaces.org/ui">  
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:f="http://xmlns.jcp.org/jsf/core">  
            <header>
          <h:form>
              <p:growl id="mensaje" showDetail="true"></p:growl>
@@ -11,7 +12,16 @@
               <div class="container-fluid">
               <div class="navbar-header">
                 <img class="img-responsive-logo" src="../resources/Imgs/Logo4.png" alt=""/>
+                <h:form>
+                            
+                        <span>
+                            <h:selectOneMenu value="#{idiomasControlador.localidad}" onchange="submit()" valueChangeListener="#{idiomasControlador.cambiarIdioma}">
+                              <f:selectItems value="#{idiomasControlador.listIdi}"/>
+                          </h:selectOneMenu>
+                      </span>
+                      </h:form>
               </div>
+                  
 
               <div class="navbar-collapse navbar-right ">
                 <ul class="nav nav-tabs">
@@ -23,9 +33,9 @@
                       <i class="fa fa-user-circle-o fa fa-2x" aria-hidden="true"></i>
                     </button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="opciones">
-                      <li><a href="#">Datos</a></li>
+                      <li><a href="#">#{esp.Datos}</a></li>
                       <li role="separator" class="divider"></li>
-                      <li><a><h:commandButton id="btnCerrarSesion" action="#{usuarioController.cerrarSesion()}" value="Cerrrar Sesion" styleClass="btnCerrarSesion"></h:commandButton></a></li>
+                      <li><a><h:commandButton id="btnCerrarSesion" action="#{usuarioController.cerrarSesion()}" value="#{esp.Cerrar_Sesión}" styleClass="btnCerrarSesion"></h:commandButton></a></li>
                     </ul>
                   </div>
                 </ul>

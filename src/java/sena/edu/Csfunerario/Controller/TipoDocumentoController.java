@@ -19,6 +19,7 @@ import sena.edu.Csfunerario.Facade.TipoDocumentoFacade;
  */
 @Named(value = "tipoDocumentoController")
 @SessionScoped
+
 public class TipoDocumentoController implements Serializable {
 
     /**

@@ -3,7 +3,9 @@
 <ui:composition template="../WEB-INF/resources/template/template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
 
     
 
@@ -11,131 +13,82 @@
         <section class="charts">
         <div class="container-fluid">
           <header>
-            <h1 class="h1">Administrativos</h1>
+            <h1 class="h1">#{esp.Usuario}s</h1>
           </header>
 
           <div class="container-fluid">
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-block">
-                  <table class="table table-primary  table-responsive table-hover table-sm">
-                    <thead>
-                      <tr class="table-active">
-                        <th>#</th>
-                        <th>Nomres</th>
-                        <th>Apellidos</th>
-                        <th>Email</th>
-                        <th>Usuario</th>
-                        <th>Tipo Usuario</th>
-                        <th>Area</th>
-                        <th>Accion</th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-secondary">
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Diego Eduardo</td>
-                        <td>Mora Castro</td>
-                        <td>demora8@misena.edu.co</td>
-                        <td>demora8</td>
-                        <td>Administrador</td>
-                        <td>Administrativa</td>
-                        <td>
-                          <button class="btn btn-outline-danger  delete" data-toggle="tooltip" data-placement="left" title="Eliminar">
-                            <span class="fa fa-trash-o" aria-hidden="true"></span>
-                          </button>
-                          <button class="btn  btn-outline-success edit" data-toggle="tooltip" data-placement="left" title="Editar">
-                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Leidy viviana</td>
-                        <td>Muñoz</td>
-                        <td>anaviviana@misena.edu.co</td>
-                        <td>anaviviana</td>
-                        <td>Radicador</td>
-                        <td>Radicados</td>
-                        <td>
-                          <button class="btn btn-outline-danger  delete" data-toggle="tooltip" data-placement="left" title="Eliminar">
-                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                          </button>
-                          <button class="btn  btn-outline-success edit" data-toggle="tooltip" data-placement="left" title="Editar">
-                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Fabian</td>
-                        <td>Rojas</td>
-                        <td>fcrojas@misena.edu.co</td>
-                        <td>fcrojas</td>
-                        <td>Asesor de duelo</td>
-                        <td>Asesoria</td>
-                        <td>
-                          <button class="btn btn-outline-danger  delete" data-toggle="tooltip" data-placement="left" title="Eliminar">
-                          <i class="fa fa-trash-o" aria-hidden="true"></i>
-                        </button>
-                        <button class="btn  btn-outline-success edit" data-toggle="tooltip" data-placement="left" title="Editar">
-                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                        </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>Diana Carolina</td>
-                        <td>Lanchero casas</td>
-                        <td>Lcasas5@misena.edu.co</td>
-                        <td>Lcasas</td>
-                        <td>Radicador</td>
-                        <td>Radicados</td>
-                        <td>
-                          <button class="btn btn-outline-danger  delete" data-toggle="tooltip" data-placement="left" title="Eliminar">
-                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                          </button>
-                          <button class="btn  btn-outline-success edit" data-toggle="tooltip" data-placement="left" title="Editar">
-                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">5</th>
-                        <td>Adrian Samuel</td>
-                        <td>Mosquera cordoba</td>
-                        <td>mcorboba@misena.edu.co</td>
-                        <td>mcordoba</td>
-                        <td>Asesor de duelo</td>
-                        <td>Administrativo</td>
-                        <td><button class="btn btn-outline-danger  delete" data-toggle="tooltip" data-placement="left" title="Eliminar">
-                          <i class="fa fa-trash-o" aria-hidden="true"></i>
-                        </button>
-                        <button class="btn  btn-outline-success edit" data-toggle="tooltip" data-placement="left" title="Editar">
-                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">6</th>
-                        <td>Dilan </td>
-                        <td>cardenas rojas</td>
-                        <td>dcardenas@misena.edu.co</td>
-                        <td>dcardenas</td>
-                        <td>Radicador</td>
-                        <td>Radicados</td>
-                        <td>
-                            <button class="btn btn-outline-danger  delete" data-toggle="tooltip" data-placement="left" title="Eliminar">
-                              <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </button>
-                            <button class="btn  btn-outline-success edit" data-toggle="tooltip" data-placement="left" title="Editar">
-                              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                            </button>
+                    <f:view>
+                        <h:form>
+                            <p:growl id="msgs" showDetail="true"/>
+                            <p:dataTable value="#{usuarioController.listarUsuario()}" 
+                                         var="item" rows="10"
+                                         paginator="true"
+                                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                         rowsPerPageTemplate="5,10,15"
+                                         editable="true"
+                                         selection="#{usuarioController.usuario}"
+                                         rowKey="#{item.idUsuario}">
+                                
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="#{esp.Tdocumento}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.idTipoDocumento.nombre}"/>
+                                </p:column>
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="#{esp.NumIdent}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.numeroIdentificacion}"/>
+                                </p:column>
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="#{esp.nombre}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.nombre} #{item.apellido}"/>
+                                </p:column>
+                                
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="#{esp.F_Nacimiento}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.fechaNacimiento}">
+                                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                                    </h:outputText>
+                                </p:column>
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="#{esp.Direccion}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.direccion}"/>
+                                </p:column>
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="#{esp.Telefono}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.telefonoFijo}"/>
+                                </p:column>
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="#{esp.Correo}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.correo}"/>
+                                </p:column>
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="#{esp.Estado}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.estado}"/>
+                                </p:column>
+                                
+                                
+                            </p:dataTable>
+                        </h:form>
+                    </f:view>
 
-                    </td>
-                  </tr>
-                      </tbody>
-                  </table>
                 </div>
               </div>
             </div>

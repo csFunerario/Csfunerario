@@ -27,4 +27,12 @@ public class RolFacade extends AbstractFacade<Rol> {
         super(Rol.class);
     }
 
+    public EntityManager getEm() {
+        return em;
+    }
+
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
+
 }
