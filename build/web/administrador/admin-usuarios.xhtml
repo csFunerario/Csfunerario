@@ -13,7 +13,7 @@
         <section class="charts">
         <div class="container-fluid">
           <header>
-            <h1 class="h1">Usuarios</h1>
+            <h1 class="h1">#{esp.Usuario}s</h1>
           </header>
 
           <div class="container-fluid">
@@ -34,26 +34,26 @@
                                 
                                 <p:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Tipo Documento"/>
+                                        <h:outputText value="#{esp.Tdocumento}"/>
                                     </f:facet>
                                     <h:outputText value="#{item.idTipoDocumento.nombre}"/>
                                 </p:column>
                                 <p:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Numero Identificacion"/>
+                                        <h:outputText value="#{esp.NumIdent}"/>
                                     </f:facet>
                                     <h:outputText value="#{item.numeroIdentificacion}"/>
                                 </p:column>
                                 <p:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Nombre"/>
+                                        <h:outputText value="#{esp.nombre}"/>
                                     </f:facet>
                                     <h:outputText value="#{item.nombre} #{item.apellido}"/>
                                 </p:column>
                                 
                                 <p:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Fecha De Nacimiento"/>
+                                        <h:outputText value="#{esp.F_Nacimiento}"/>
                                     </f:facet>
                                     <h:outputText value="#{item.fechaNacimiento}">
                                         <f:convertDateTime pattern="MM/dd/yyyy" />
@@ -61,25 +61,25 @@
                                 </p:column>
                                 <p:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Direccion"/>
+                                        <h:outputText value="#{esp.Direccion}"/>
                                     </f:facet>
                                     <h:outputText value="#{item.direccion}"/>
                                 </p:column>
                                 <p:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Telefono Fijo"/>
+                                        <h:outputText value="#{esp.Telefono}"/>
                                     </f:facet>
                                     <h:outputText value="#{item.telefonoFijo}"/>
                                 </p:column>
                                 <p:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Correo"/>
+                                        <h:outputText value="#{esp.Correo}"/>
                                     </f:facet>
                                     <h:outputText value="#{item.correo}"/>
                                 </p:column>
                                 <p:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Estado"/>
+                                        <h:outputText value="#{esp.Estado}"/>
                                     </f:facet>
                                     <h:outputText value="#{item.estado}"/>
                                 </p:column>

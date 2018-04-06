@@ -12,12 +12,12 @@
                             <p:dialog id="UsuRolDlg" widgetVar="UsuRolDialog" modal="true" resizable="false" appendTo="@(admin-usuarios)" header="Editar Producto">
         
                             <h:form id="UsurolForm">
-                                <h1><h:outputText value="Agregar Rol"/></h1>
+                                <h1><h:outputText value="#{esp.Agregar} #{esp.Rol}"/></h1>
                                 <p:panelGrid columns="2">
-                                    <p:outputLabel value="Usuario:" for="idUsuario" />
+                                    <p:outputLabel value="#{esp.Usuario}:" for="idUsuario" />
                                     <p:inputText id="idUsuario" value="#{usuarioController.usuarioRol.idUsuario.nombre} #{usuarioController.usuarioRol.idUsuario.apellido}" required="true" />
 
-                                    <p:outputLabel value="IdRol:" for="idRol" />
+                                    <p:outputLabel value="#{esp.Rol}:" for="idRol" />
                                     <p:selectOneMenu id="idRol" value="#{usuarioRolController.rol}" required="true" requiredMessage="The IdRol field is required.">
                                         <f:selectItems value="#{usuarioRolController.listRol()}" var="lRol" itemLabel="#{lRol.nombre}"  itemValue="#{lRol.idRol}"/>
                                     </p:selectOneMenu>

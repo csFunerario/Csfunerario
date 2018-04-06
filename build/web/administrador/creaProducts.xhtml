@@ -15,25 +15,33 @@
 
 
             <h:form>
-                <h2><h:outputText value="Crear Productos o Servicios"/></h2>
+                <h2><h:outputText value="#{esp.Crear} #{esp.Productos} #{esp.O} #{esp.Servicios}"/></h2>
                 <h:panelGrid columns="4">
-                    <h:outputLabel value="Nombre:" for="nombre" />
-                    <h:inputText id="nombre" value="#{productoServicioControlador.productoServicio.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
-                    <h:outputLabel value="Precio:" for="precio" />
-                        <h:inputText id="precio" value="#{productoServicioControlador.productoServicio.precio}" title="Precio" required="true" requiredMessage="The Precio field is required."/>
-                    <h:outputLabel value="Caracteristicas:" for="caracteristicas" />
-                    <h:inputTextarea id="caracteristicas" value="#{productoServicioControlador.productoServicio.caracteristicas}" title="Caracteristicas" required="true" requiredMessage="The Caracteristicas field is required."/>
-                    <h:outputLabel value="Descripcion:" for="descripcion" />
-                    <h:inputTextarea id="descripcion" value="#{productoServicioControlador.productoServicio.descripcion}" title="Descripcion" required="true" requiredMessage="The Descripcion field is required."/>
-                    <h:outputLabel value="Tipo Servicio:" for="TipoServicio" />
-                    <h:selectOneMenu id="idTipoServicio" value="#{productoServicioControlador.tipoServicio.idTipoServicio}" title="IdTipoServicio" required="true" requiredMessage="The IdTipoServicio field is required.">
+                    <h:outputLabel value="#{esp.nombre}:" for="nombre" />
+                    <h:inputText id="nombre" value="#{productoServicioControlador.productoServicio.nombre}" title="Nombre" required="true" requiredMessage="#{esp.RNombre}."/>
+                    <h:outputLabel value="#{esp.Costo}:" for="precio" />
+                        <h:inputText id="precio" value="#{productoServicioControlador.productoServicio.precio}" title="Precio" required="true" requiredMessage="#{esp.RCost}."/>
+                    <h:outputLabel value="#{esp.Caracteristicas}:" for="caracteristicas" />
+                    <h:inputTextarea id="caracteristicas" value="#{productoServicioControlador.productoServicio.caracteristicas}" title="Caracteristicas" required="true" requiredMessage="#{esp.RCarateristicas}."/>
+                    <h:outputLabel value="#{esp.Descripcion}:" for="descripcion" />
+                    <h:inputTextarea id="descripcion" value="#{productoServicioControlador.productoServicio.descripcion}" title="Descripcion" required="true" requiredMessage="#{esp.Rdescripcion}."/>
+                    <h:outputLabel value="#{esp.Tipo} #{esp.Servicio}:" for="TipoServicio" />
+                    <h:selectOneMenu id="idTipoServicio" value="#{productoServicioControlador.tipoServicio.idTipoServicio}" title="IdTipoServicio" required="true" requiredMessage="#{esp.RTServicio}
+.">
                         <f:selectItems value="#{productoServicioControlador.listTProd()}" var="tp" itemLabel="#{tp.nombre}" itemValue="#{tp.idTipoServicio}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:commandButton action="#{productoServicioControlador.crearProducto()}" value="Guardar"/>
+                <h:commandButton action="#{productoServicioControlador.crearProducto()}" value="#{esp.Guardar}"/>
+                
             </h:form>
-        </f:view>
+                <h:form>
+             <h:commandButton  action="adminProducts.xhtml" value="#{esp.Cancelar}"/>
+                                
+            </h:form>
+                
 
+        </f:view>
+            
     </ui:define>
 
 

@@ -16,7 +16,7 @@
             <h:form> 
 
                 <p:growl autoUpdate="true" showDetail="true"/>
-                <h2><h:outputText value="Productos y Servicios "/> 
+                <h2><h:outputText value="#{esp.Productos} #{esp.Y} #{esp.Servicios}"/> 
                     <h:commandLink>
                         <h:graphicImage url="../resources/Imgs/xls.jpg" width="23"/>
                         <p:dataExporter type="xls" target="tdproductos" fileName="Productos Y servicios"/>
@@ -32,26 +32,26 @@
                              rowKey="#{item.idProductoServicio}">
                     <p:column  headerText="Nombre" filterBy="#{item.nombre}"  filterMatchMode="contains">
                         <f:facet name="header">
-                            <h:outputText value="Nombre"/>
+                            <h:outputText value="#{esp.nombre}"/>
                         </f:facet>
                         <h:outputText value="#{item.nombre}"/>
                     </p:column>
                     <p:column headerText="precio">
                         <f:facet name="header">
-                            <h:outputText value="Precio"/>
+                            <h:outputText value="#{esp.Costo}"/>
                         </f:facet>
                         <h:outputText value="#{item.precio}" />
                     </p:column>
                     <p:column headerText="Caracteriticas">
                         <f:facet  name="header">
-                            <h:outputText value="Caracteristicas"/>
+                            <h:outputText value="#{esp.Caracteristicas}"/>
                         </f:facet>
                         <h:outputText value="#{item.caracteristicas}"/>
                     </p:column>
 
                     <p:column  headerText="TipoServicio" filterBy="#{item.idTipoServicio.nombre}" filterMatchMode="contains">
                         <f:facet name="header"> 
-                            <h:outputText value="Tipo Servicio"/>
+                            <h:outputText value="#{esp.Tipo} #{esp.Servicio}"/>
                         </f:facet>
                         <h:outputText value="#{item.idTipoServicio.nombre}"/>
                     </p:column>
